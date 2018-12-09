@@ -1,6 +1,9 @@
 deploy:
 	deploy.sh
 
+pull:
+	pull.sh
+
 setup:
 	setup.sh
 
