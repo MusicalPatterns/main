@@ -1,0 +1,19 @@
+Gemfile text eol=lf
+*.rb text eol=lf
+*.ru text eol=lf
+*.md text eol=lf
+*.scss text eol=lf
+*.js text eol=lf
+*.ejs text eol=lf
+*.erb text eol=lf
+*.jbuilder text eol=lf
+*.yml text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+
+*.mp3 binary
+*.wav binary
+*.ico binary
+*.png binary
