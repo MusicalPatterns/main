@@ -24,7 +24,7 @@ setup_submodules() {
 	git make pull
 	npm i
 }
-
+export -f setup_submodules
 setup_submodules
 
 gcloud config configurations create musical-patterns
