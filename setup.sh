@@ -18,9 +18,11 @@ fi
 
 function setup_submodules {
 	git submodule update --init --recursive
+	git submodule foreach setup_submodules
 	git submodule foreach git checkout master
-	git submodule foreach git pull -r
-	git pull -r
+	git submodule foreach make pull
+	git make pull
+	npm i
 }
 
 setup_submodules
@@ -36,16 +38,3 @@ npm config set git-tag-version=false
 PATHS="export PATH=\$PATH:~/workspace/MusicalPatterns/cli/node_modules/.bin/:~/workspace/MusicalPatterns/compiler/node_modules/.bin/:~/workspace/MusicalPatterns/lab/node_modules/.bin/:~/workspace/MusicalPatterns/pattern/node_modules/.bin/:~/workspace/MusicalPatterns/performer/node_modules/.bin/:~/workspace/MusicalPatterns/playroom/node_modules/.bin/:~/workspace/MusicalPatterns/utilities/node_modules/.bin/:~/workspace/MusicalPatterns/main/cli/node_modules/.bin/:~/workspace/MusicalPatterns/main/compiler/node_modules/.bin/:~/workspace/MusicalPatterns/main/lab/node_modules/.bin/:~/workspace/MusicalPatterns/main/pattern/node_modules/.bin/:~/workspace/MusicalPatterns/main/performer/node_modules/.bin/:~/workspace/MusicalPatterns/main/playroom/node_modules/.bin/:~/workspace/MusicalPatterns/main/utilities/node_modules/.bin"
 sed -i -e "/${PATHS//\//\\/}/d" ~/.bash_profile
 echo ${PATHS} >> ~/.bash_profile
-
-declare -a REPOS=("cli" "utilities" "performer" "compiler" "pattern" "playroom" "lab")
-pushd ..
-	for REPO in "${REPOS[@]}"
-	do
-		git clone git@github.com:MusicalPatterns/${REPO}.git
-		pushd ${REPO}
-			setup_submodules
-
-			npm i
-		popd
-	done
-popd
