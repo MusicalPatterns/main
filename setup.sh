@@ -16,7 +16,7 @@ if [[ $? -ne 0 ]] ; then
     git config --global user.email $USER_EMAIL
 fi
 
-function setup_submodules {
+setup_submodules() {
 	git submodule update --init --recursive
 	git submodule foreach setup_submodules
 	git submodule foreach git checkout master
