@@ -6,3 +6,5 @@ node_modules
 .module-cache
 *.log*
 dist
+
+fake_npm_*
