@@ -6,6 +6,11 @@
 
 Sends the `lab` up to GCP.
 
+`make ripple MSG="new wave"`
+
+Begins with the `cli` and working its way through the stack of intra-project dependencies up to the `lab`.
+Each stop it updates dependencies, commits, pushes, and publishes.
+
 `make setup`
 
 Sets up your environment, including cloning down all the projects as siblings to main.
@@ -15,10 +20,9 @@ It's not always best to do your development in `main`.
 
 Starts up the `lab` locally.
 
-`make update MSG="new wave"`
+`make update`
 
-Begins with the `cli` and working its way through the stack of intra-project dependencies up to the `lab`.
-Each stop it updates dependencies, commits, pushes, and publishes.
+Updates dependencies for all repos, recursively.
 
 ## cli
 
