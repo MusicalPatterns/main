@@ -2,7 +2,7 @@ deploy:
 	deploy.sh
 
 pull:
-	pull.sh
+	cli/bin/pull.sh
 
 setup:
 	setup.sh
