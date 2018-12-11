@@ -8,6 +8,14 @@ do
 	pushd ${REPO}
 		npm i
 		npm update
+		make test
+		make lint
+	popd
+done
+
+for REPO in "${REPOS[@]}"
+do
+	pushd ${REPO}
 		make ship MSG="${MSG}"
 	popd
 done
