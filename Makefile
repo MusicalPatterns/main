@@ -4,6 +4,9 @@ deploy:
 pull:
 	cli/bin/pull.sh
 
+push:
+	cli/bin/push.sh
+
 ripple:
 	ripple.sh
 
