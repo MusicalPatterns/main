@@ -9,6 +9,13 @@
       <excludeFolder url="file://$MODULE_DIR$/compiler/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/lab/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/beaten-path/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/hafuhafu/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/houndstoothtopia-theme/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/stepwise/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/template/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/xelt/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/zdaubyaos/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/pattern/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/pattern/dist" />
       <excludeFolder url="file://$MODULE_DIR$/performer/.idea" />
