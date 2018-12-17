@@ -4,13 +4,13 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cli" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/compiler" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_cli" vcs="" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_compiler" vcs="" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_lab" vcs="" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_pattern" vcs="" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_performer" vcs="" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_playroom" vcs="" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_utilities" vcs="" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_cli" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_compiler" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_lab" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_pattern" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_performer" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_playroom" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_utilities" vcs="none" />
     <mapping directory="$PROJECT_DIR$/lab" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/beaten-path" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/hafuhafu" vcs="Git" />
