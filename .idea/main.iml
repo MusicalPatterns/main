@@ -7,6 +7,12 @@
       <excludeFolder url="file://$MODULE_DIR$/cli/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/compiler/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/compiler/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_cli" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_compiler" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_pattern" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_performer" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_playroom" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_utilitiesfake" />
       <excludeFolder url="file://$MODULE_DIR$/lab/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/lab/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/beaten-path/package/dist" />
