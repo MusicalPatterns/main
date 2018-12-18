@@ -24,7 +24,7 @@ setup_submodules() {
 	git submodule foreach setup_submodules
 	git submodule foreach git checkout master
 	git submodule foreach make pull
-	git make pull
+	make pull
 	npm i
 }
 export -f setup_submodules
