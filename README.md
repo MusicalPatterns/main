@@ -9,7 +9,7 @@ Sends the `lab` up to GCP.
 `make ripple MSG="new wave"`
 
 Begins with the `cli` and working its way through the stack of intra-project dependencies up to the `lab`.
-Each stop it updates dependencies, commits, pushes, and publishes.
+Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
 
 `make setup`
 
