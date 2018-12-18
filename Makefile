@@ -17,4 +17,4 @@ start:
 	start.sh
 
 update:
-	update.sh
+	cli/bin/update.sh
