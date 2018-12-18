@@ -16,6 +16,9 @@ if [[ $? -ne 0 ]] ; then
     git config --global user.email $USER_EMAIL
 fi
 
+git config --global core.autocrlf false
+git config --global core.eol lf
+
 setup_submodules() {
 	git submodule update --init --recursive
 	git submodule foreach setup_submodules
