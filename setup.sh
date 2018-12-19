@@ -38,6 +38,7 @@ setup_submodules() {
 	git submodule foreach git checkout master
 	git submodule foreach make pull
 	npm i
+	git checkout package-lock.json
 	make pull
 }
 export -f setup_submodules
