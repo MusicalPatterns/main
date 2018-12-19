@@ -6,10 +6,14 @@ PATHS="export PATH=\$PATH:~/workspace/MusicalPatterns/main/cli/node_modules/.bin
 sed -i -e "/${PATHS//\//\\/}/d" ~/.bash_profile
 echo ${PATHS} >> ~/.bash_profile
 
-gcloud config configurations create musical-patterns
+if [[ $(gcloud config configurations list | grep -m1 musical-patterns) ]] ; then
+	echo "musical-patterns configuration already exists"
+else
+	gcloud config configurations create musical-patterns
+fi
+gcloud config configurations activate musical-patterns
 gcloud config set project musical-patterns
 gcloud config set account kingwoodchuckii@gmail.com
-gcloud auth application-default login
 
 npm config set git-tag-version=false
 
