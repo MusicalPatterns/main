@@ -12,10 +12,11 @@
     <mapping directory="$PROJECT_DIR$/fake_npm_playroom" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_utilities" vcs="none" />
     <mapping directory="$PROJECT_DIR$/lab" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/beaten-path" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab/src/beatenPath" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/hafuhafu" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopia-theme" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopia-theme/src/custom/coordinates/houndstoothOutline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopiaTheme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopiaTheme/src/custom/coordinates/houndstoothOutline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab/src/playroomTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/stepwise" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/template" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/xelt" vcs="Git" />
