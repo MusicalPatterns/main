@@ -8,8 +8,6 @@ do
 	pushd ${REPO}
 		npm i
 		npm update
-		make test
-		make lint
 		make ship MSG="${MSG}"
 	popd
 done
