@@ -20,6 +20,10 @@ It's not always best to do your development in `main`.
 
 Starts up the `lab` locally.
 
+`make update`
+
+Updates dependencies, recursively.
+
 ## cli
 
 [README.md](https://github.com/MusicalPatterns/cli/blob/master/README.md)

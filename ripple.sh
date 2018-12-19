@@ -6,7 +6,8 @@ declare -a REPOS=("cli" "utilities" "performer" "compiler" "pattern" "playroom" 
 for REPO in "${REPOS[@]}"
 do
 	pushd ${REPO}
-		make update
+		npm i
+		npm update
 		make test
 		make lint
 		make ship MSG="${MSG}"
