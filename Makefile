@@ -1,20 +1,25 @@
+MAKEFLAGS += --no-print-directory
+
+commit:
+	@cli/bin/commit.sh
+
 deploy:
-	deploy.sh
+	@deploy.sh
 
 pull:
-	cli/bin/pull.sh
+	@cli/bin/pull.sh
 
 push:
-	cli/bin/push.sh
+	@cli/bin/push.sh
 
 ripple:
-	ripple.sh
+	@ripple.sh
 
 setup:
-	setup.sh
+	@setup.sh
 
 start:
-	start.sh
+	@start.sh
 
 update:
-	cli/bin/update.sh
+	@update.sh
