@@ -15,9 +15,11 @@
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_utilitiesfake" />
       <excludeFolder url="file://$MODULE_DIR$/lab/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/lab/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/lab/src/beaten-path/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/beatenPath/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/hafuhafu/package/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/lab/src/houndstoothtopia-theme/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/houndstoothtopiaTheme/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/performerQa/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/playroomTest/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/stepwise/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/template/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/xelt/package/dist" />
