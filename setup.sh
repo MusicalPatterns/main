@@ -33,12 +33,12 @@ git config --global core.autocrlf false
 git config --global core.eol lf
 
 setup_submodules() {
-	git submodule update --init --recursive
-	git submodule foreach setup_submodules
-	git submodule foreach git checkout master
-	git submodule foreach make pull
-	npm i
-	git checkout package-lock.json
+	git submodule update --init --recursive || return
+	git submodule foreach setup_submodules || return
+	git submodule foreach git checkout master || return
+	git submodule foreach make pull || return
+	npm i || return
+	git checkout package-lock.json || return
 	make pull
 }
 export -f setup_submodules

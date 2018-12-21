@@ -3,8 +3,8 @@
 set -e
 
 update_recursively() {
-	npm i
-	npm update
+	npm i || return
+	npm update || return
 	git submodule foreach update_recursively
 }
 export -f update_recursively
