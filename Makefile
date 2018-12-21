@@ -6,6 +6,9 @@ commit:
 deploy:
 	@deploy.sh
 
+new:
+	@new.sh
+
 pull:
 	@cli/bin/pull.sh
 
