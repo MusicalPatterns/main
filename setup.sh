@@ -7,7 +7,7 @@ sed -i -e "/${PATHS//\//\\/}/d" ~/.bash_profile
 echo ${PATHS} >> ~/.bash_profile
 
 if [[ $(gcloud config configurations list | grep -m1 musical-patterns) ]] ; then
-	echo "musical-patterns configuration already exists"
+	echo "The 'musical-patterns' configuration already exists."
 else
 	gcloud config configurations create musical-patterns
 fi
@@ -19,15 +19,15 @@ npm config set git-tag-version=false
 
 git config --get user.name > /dev/null 2>&1
 if [[ $? -ne 0 ]] ; then
-    printf "${Yellow}Please set your global git user name: ${NC}"
+    printf "${Yellow}Please set your global git user name: "
     read USER_NAME
-    git config --global user.name $USER_NAME
+    git config --global user.name ${USER_NAME}
 fi
 git config --get user.email > /dev/null 2>&1
 if [[ $? -ne 0 ]] ; then
-    printf "${Yellow}Please set your global git user email: ${NC}"
+    printf "Please set your global git user email: "
     read USER_EMAIL
-    git config --global user.email $USER_EMAIL
+    git config --global user.email ${USER_EMAIL}
 fi
 git config --global core.autocrlf false
 git config --global core.eol lf
