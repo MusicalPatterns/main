@@ -6,12 +6,29 @@ export PATTERN_ID=$(sed 's/^[[:upper:]]/\L&/;s/[[:upper:]]/\L_&/g' <<< ${PATTERN
 export PATTERN_TITLE=$(sed 's/^[[:upper:]]/\L&/;s/[[:upper:]]/\L\ &/g' <<< ${PATTERN} | sed 's/\b\(.\)/\u\1/g')
 export PATTERN_PACKAGE=$(sed 's/^[[:upper:]]/\L&/;s/[[:upper:]]/\L\-&/g' <<< ${PATTERN})
 
+create_pattern_repo() {
+	set +e
+	git ls-remote git@github.com:MusicalPatterns/pattern-${PATTERN} > /dev/null 2>&1
+	if [[ $? == 0 ]] ; then
+		echo "${PATTERN} repo already exists in the 'MusicalPatterns' GitHub Organization."
+		return 0
+	else
+		set -e
+		if [[ ${GITHUB_ACCESS_TOKEN}} == "" ]] ; then
+			echo "Your GitHub Access Token is not available in this environment. It is required to automatically create this repo. Please follow instructions at https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/, selecting at least the 'repo' scope, then export it as GITHUB_ACCESS_TOKEN in your '.bash_profile'."
+		fi
+		curl -u $(git config user.email):${GITHUB_ACCESS_TOKEN} https://api.github.com/orgs/MusicalPatterns/repos -d "{\"name\":\"pattern-${PATTERN}\",\"auto_init\":true}"
+	fi
+}
+
 register_pattern() {
+	set +e
 	grep -q ${PATTERN_ID} pattern/src/registry.ts
 	if [[ $? == 0 ]] ; then
 		echo "${PATTERN_ID} already registered with '@musical-patterns/pattern'."
 		return
 	fi
+	set -e
 
 	sed -i "/${PATTERN_ID}/d" pattern/src/registry.ts
 	LINE_NUMBER=0
@@ -39,35 +56,36 @@ add_pattern() {
 	fi
 
 	pushd lab
-		npm update
-		make update PATTERN=template
+		npm update || return
+		make update PATTERN=template || return
 
-		make add
+		make add || return
 
 		PATTERN_DIR=src/${PATTERN}/
 
-		cp -r src/template/* ${PATTERN_DIR}
+		cp -r src/template/* ${PATTERN_DIR}  || return
 
-		sed -i "s/Template/${PATTERN_TITLE}/g" ${PATTERN_DIR}README.md
-		sed -i "s/copy\ me\ for\ quicker\ provisioning\ of\ new\ patterns/description\ TBA/g" ${PATTERN_DIR}README.md
+		sed -i "s/Template/${PATTERN_TITLE}/g" ${PATTERN_DIR}README.md || return
+		sed -i "s/copy\ me\ for\ quicker\ provisioning\ of\ new\ patterns/description\ TBA/g" ${PATTERN_DIR}README.md || return
 
-		sed -i "s/PatternId.TEMPLATE/PatternId.${PATTERN_ID}/g" ${PATTERN_DIR}src/patterns.ts
-		sed -i "s/Template/${PATTERN_TITLE}/g" ${PATTERN_DIR}src/patterns.ts
+		sed -i "s/PatternId.TEMPLATE/PatternId.${PATTERN_ID}/g" ${PATTERN_DIR}src/patterns.ts || return
+		sed -i "s/Template/${PATTERN_TITLE}/g" ${PATTERN_DIR}src/patterns.ts || return
 
-		sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${PATTERN}\.git\"/g" ${PATTERN_DIR}package/package.json
-		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" ${PATTERN_DIR}package/package.json
-		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" ${PATTERN_DIR}package/package-lock.json
+		sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${PATTERN}\.git\"/g" ${PATTERN_DIR}package/package.json || return
+		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" ${PATTERN_DIR}package/package.json || return
+		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" ${PATTERN_DIR}package/package-lock.json || return
 		npm version 1.0.0
 	popd
 }
 
 exclude_pattern_directories() {
-	sed -i "/${PATTERN}\/package\/dist/d" .idea/main.iml
-	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/package\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/package\/dist\" \/>" .idea/main.iml
-	sed -i "/${PATTERN}\/package\/dist/d" lab/.idea/lab.iml
-	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/package\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/package\/dist\" \/>" lab/.idea/lab.iml
+	sed -i "/${PATTERN}\/package\/dist/d" .idea/main.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/package\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/package\/dist\" \/>" .idea/main.iml || return
+	sed -i "/${PATTERN}\/package\/dist/d" lab/.idea/lab.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/package\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/package\/dist\" \/>" lab/.idea/lab.iml || return
 }
 
+create_pattern_repo
 register_pattern
 add_pattern
 exclude_pattern_directories
