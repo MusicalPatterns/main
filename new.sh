@@ -63,18 +63,22 @@ add_pattern() {
 
 		PATTERN_DIR=src/${PATTERN}/
 
-		cp -r src/template/* ${PATTERN_DIR}  || return
+		cp -r src/template/* ${PATTERN_DIR} || return
 
-		sed -i "s/Template/${PATTERN_TITLE}/g" ${PATTERN_DIR}README.md || return
-		sed -i "s/copy\ me\ for\ quicker\ provisioning\ of\ new\ patterns/description\ TBA/g" ${PATTERN_DIR}README.md || return
+		pushd ${PATTERN_DIR}
+			sed -i "s/Template/${PATTERN_TITLE}/g" README.md || return
+			sed -i "s/copy\ me\ for\ quicker\ provisioning\ of\ new\ patterns/description\ TBA/g" README.md || return
 
-		sed -i "s/PatternId.TEMPLATE/PatternId.${PATTERN_ID}/g" ${PATTERN_DIR}src/patterns.ts || return
-		sed -i "s/Template/${PATTERN_TITLE}/g" ${PATTERN_DIR}src/patterns.ts || return
+			sed -i "s/PatternId.TEMPLATE/PatternId.${PATTERN_ID}/g" src/patterns.ts || return
+			sed -i "s/Template/${PATTERN_TITLE}/g" src/patterns.ts || return
 
-		sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${PATTERN}\.git\"/g" ${PATTERN_DIR}package/package.json || return
-		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" ${PATTERN_DIR}package/package.json || return
-		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" ${PATTERN_DIR}package/package-lock.json || return
-		npm version 1.0.0
+			pushd package
+				sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${PATTERN}\.git\"/g" package.json || return
+				sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package.json || return
+				sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package-lock.json || return
+				npm version 1.0.0
+			popd
+		popd
 	popd
 }
 
