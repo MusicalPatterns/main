@@ -16,6 +16,7 @@
     <mapping directory="$PROJECT_DIR$/lab/src/hafuhafu" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopiaTheme" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopiaTheme/src/custom/coordinates/houndstoothOutline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab/src/omnizonk" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/performerQa" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/playroomTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/stepwise" vcs="Git" />
