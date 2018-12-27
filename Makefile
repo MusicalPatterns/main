@@ -24,5 +24,11 @@ setup:
 start:
 	@start.sh
 
+stash:
+	@cli/bin/stash.sh
+
+stash_pop:
+	@cli/bin/stash_pop.sh
+
 update:
 	@update.sh
