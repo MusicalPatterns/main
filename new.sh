@@ -56,7 +56,7 @@ add_pattern() {
 	fi
 
 	pushd lab
-		npm update || return
+		make update || return
 		make update PATTERN=template || return
 
 		make add || return
