@@ -1,21 +1,21 @@
 [submodule "cli"]
 	path = cli
-	url = git@github.com:MusicalPatterns/cli.git
+	url = https://github.com/MusicalPatterns/cli.git
 [submodule "compiler"]
 	path = compiler
-	url = git@github.com:MusicalPatterns/compiler.git
+	url = https://github.com/MusicalPatterns/compiler.git
 [submodule "lab"]
 	path = lab
-	url = git@github.com:MusicalPatterns/lab.git
+	url = https://github.com/MusicalPatterns/lab.git
 [submodule "pattern"]
 	path = pattern
-	url = git@github.com:MusicalPatterns/pattern.git
+	url = https://github.com/MusicalPatterns/pattern.git
 [submodule "performer"]
 	path = performer
-	url = git@github.com:MusicalPatterns/performer.git
+	url = https://github.com/MusicalPatterns/performer.git
 [submodule "playroom"]
 	path = playroom
-	url = git@github.com:MusicalPatterns/playroom.git
+	url = https://github.com/MusicalPatterns/playroom.git
 [submodule "utilities"]
 	path = utilities
-	url = git@github.com:MusicalPatterns/utilities.git
+	url = https://github.com/MusicalPatterns/utilities.git
