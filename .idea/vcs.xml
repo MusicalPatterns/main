@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cliPattern" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/compiler" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/fake_npm_cli" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_compiler" vcs="none" />

@@ -1,6 +1,9 @@
 [submodule "cli"]
 	path = cli
 	url = https://github.com/MusicalPatterns/cli.git
+[submodule "cliPattern"]
+	path = cliPattern
+	url = git@github.com:MusicalPatterns/cli-pattern.git
 [submodule "compiler"]
 	path = compiler
 	url = https://github.com/MusicalPatterns/compiler.git

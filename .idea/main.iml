@@ -5,6 +5,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/cli/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/cliPattern/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/cliPattern/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/compiler/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/compiler/dist" />
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_cli" />
