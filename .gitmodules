@@ -3,7 +3,7 @@
 	url = https://github.com/MusicalPatterns/cli.git
 [submodule "cliPattern"]
 	path = cliPattern
-	url = git@github.com:MusicalPatterns/cli-pattern.git
+	url = https://github.com/MusicalPatterns/cli-pattern.git
 [submodule "compiler"]
 	path = compiler
 	url = https://github.com/MusicalPatterns/compiler.git
@@ -24,4 +24,4 @@
 	url = https://github.com/MusicalPatterns/utilities.git
 [submodule "utilitiesPattern"]
 	path = utilitiesPattern
-	url = git@github.com:MusicalPatterns/utilities-pattern.git
+	url = https://github.com/MusicalPatterns/utilities-pattern.git
