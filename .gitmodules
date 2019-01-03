@@ -19,3 +19,6 @@
 [submodule "utilities"]
 	path = utilities
 	url = https://github.com/MusicalPatterns/utilities.git
+[submodule "utilitiesPattern"]
+	path = utilitiesPattern
+	url = git@github.com:MusicalPatterns/utilities-pattern.git

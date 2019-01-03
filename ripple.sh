@@ -2,7 +2,7 @@
 
 set -e
 
-declare -a REPOS=("cli" "utilities" "performer" "compiler" "pattern" "playroom" "lab")
+declare -a REPOS=("cli" "utilities" "performer" "compiler" "utilitiesPattern" "pattern" "playroom" "lab")
 for REPO in "${REPOS[@]}"
 do
 	pushd ${REPO}

@@ -18,13 +18,13 @@
       <excludeFolder url="file://$MODULE_DIR$/lab/src/beatenPath/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/hafuhafu/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/houndstoothtopiaTheme/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/omnizonk/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/performerQa/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/playroomTest/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/stepwise/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/template/package/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/lab/src/xenharmonicSeries/package/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/lab/src/omnizonk/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/xelt/package/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab/src/xenharmonicSeries/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/zdaubyaos/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/pattern/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/pattern/dist" />
@@ -36,6 +36,9 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/utilities/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/utilities/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/utilitiesPattern/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/utilitiesPattern/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/utilitiesPattern/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
