@@ -23,14 +23,14 @@ create_pattern_repo() {
 
 register_pattern() {
 	set +e
-	grep -q ${PATTERN_ID} pattern/src/registry.ts
+	grep -q ${PATTERN_ID} registry/src/registry.ts
 	if [[ $? == 0 ]] ; then
-		echo "${PATTERN_ID} already registered with '@musical-patterns/pattern'."
+		echo "${PATTERN_ID} already registered with '@musical-patterns/registry'."
 		return
 	fi
 	set -e
 
-	sed -i "/${PATTERN_ID}/d" pattern/src/registry.ts
+	sed -i "/${PATTERN_ID}/d" registry/src/registry.ts
 	LINE_NUMBER=0
 	IN_REGISTRY=false
 	while read LINE ; do
@@ -41,10 +41,10 @@ register_pattern() {
 		if [[ ${LINE} == "enum PatternId {" ]] ; then
 			IN_REGISTRY=true
 		fi
-	done < pattern/src/registry.ts
-	sed -i "${LINE_NUMBER}i\ \ \ \ ${PATTERN_ID} = '${PATTERN_ID}'," pattern/src/registry.ts
+	done < registry/src/registry.ts
+	sed -i "${LINE_NUMBER}i\ \ \ \ ${PATTERN_ID} = '${PATTERN_ID}'," registry/src/registry.ts
 
-	pushd pattern
+	pushd registry
 		make ship MSG="registering ${PATTERN_ID}" PATTERN=""
 	popd
 }

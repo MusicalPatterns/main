@@ -11,9 +11,9 @@
       <excludeFolder url="file://$MODULE_DIR$/compiler/dist" />
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_cli" />
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_compiler" />
-      <excludeFolder url="file://$MODULE_DIR$/fake_npm_pattern" />
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_performer" />
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_playroom" />
+      <excludeFolder url="file://$MODULE_DIR$/fake_npm_registry" />
       <excludeFolder url="file://$MODULE_DIR$/fake_npm_utilitiesfake" />
       <excludeFolder url="file://$MODULE_DIR$/lab/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/lab/dist" />
@@ -28,12 +28,12 @@
       <excludeFolder url="file://$MODULE_DIR$/lab/src/xelt/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/xenharmonicSeries/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/zdaubyaos/package/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/registry/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/registry/dist" />
       <excludeFolder url="file://$MODULE_DIR$/performer/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/performer/dist" />
       <excludeFolder url="file://$MODULE_DIR$/playroom/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/playroom/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/registry/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/registry/dist" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/utilities/.idea" />
