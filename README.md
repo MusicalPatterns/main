@@ -8,15 +8,15 @@
 
 Sends the `lab` up to GCP.
 
-`make ripple MSG="new wave"`
-
-Begins with the `cli` and working its way through the stack of intra-project dependencies up to the `lab`.
-Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
-
 `make setup`
 
 Sets up your environment, including cloning down all the projects as siblings to main.
 It's not always best to do your development in `main`.
+
+`make ship MSG="new wave"`
+
+Begins with the `cli` and working its way through the stack of intra-project dependencies up to the `lab`.
+Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
 
 `make start`
 
