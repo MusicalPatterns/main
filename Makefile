@@ -30,5 +30,8 @@ stash:
 stash_pop:
 	@cli/bin/stash_pop.sh
 
+test:
+	@:
+
 update:
 	@update.sh
