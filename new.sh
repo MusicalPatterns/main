@@ -59,7 +59,7 @@ add_pattern() {
 		make update || return
 		make update PATTERN=template || return
 
-		make add || return
+		git submodule add --force --name ${PATTERN} https://github.com/MusicalPatterns/pattern-${PATTERN}.git src/${PATTERN} || return
 
 		PATTERN_DIR=src/${PATTERN}/
 
