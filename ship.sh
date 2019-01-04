@@ -21,5 +21,5 @@ do
 	popd > /dev/null 2>&1
 done
 
- make commit
- make push
+make commit
+make push
