@@ -1,8 +1,5 @@
 MAKEFLAGS += --no-print-directory
 
-clean_updates:
-	@:
-
 commit:
 	@cli/bin/commit.sh
 

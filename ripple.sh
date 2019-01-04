@@ -6,7 +6,6 @@ declare -a REPOS=("cli" "utilities" "performer" "compiler" "pattern" "registry" 
 for REPO in "${REPOS[@]}"
 do
 	pushd ${REPO}
-		make clean_updates
 		npm update
 		make ship MSG="${MSG}"
 	popd
