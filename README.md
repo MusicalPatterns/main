@@ -50,6 +50,10 @@ Updates dependencies, recursively.
 
 [README.md](https://github.com/MusicalPatterns/playroom/blob/master/README.md)
 
+## registry
+
+[README.md](https://github.com/MusicalPatterns/registry/blob/master/README.md)
+
 ## utilities
 
 [README.md](https://github.com/MusicalPatterns/utilities/blob/master/README.md)
