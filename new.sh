@@ -72,21 +72,19 @@ add_pattern() {
 			sed -i "s/PatternId.TEMPLATE/PatternId.${PATTERN_ID}/g" src/patterns.ts || return
 			sed -i "s/Template/${PATTERN_TITLE}/g" src/patterns.ts || return
 
-			pushd package
-				sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${PATTERN}\.git\"/g" package.json || return
-				sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package.json || return
-				sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package-lock.json || return
-				npm version 1.0.0
-			popd
+			sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${PATTERN}\.git\"/g" package.json || return
+			sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package.json || return
+			sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package-lock.json || return
+			npm version 1.0.0
 		popd
 	popd
 }
 
 exclude_pattern_directories() {
-	sed -i "/${PATTERN}\/package\/dist/d" .idea/main.iml || return
-	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/package\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/package\/dist\" \/>" .idea/main.iml || return
-	sed -i "/${PATTERN}\/package\/dist/d" lab/.idea/lab.iml || return
-	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/package\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/package\/dist\" \/>" lab/.idea/lab.iml || return
+	sed -i "/${PATTERN}\/dist/d" .idea/main.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/dist\" \/>" .idea/main.iml || return
+	sed -i "/${PATTERN}\/dist/d" lab/.idea/lab.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/dist\" \/>" lab/.idea/lab.iml || return
 }
 
 create_pattern_repo
