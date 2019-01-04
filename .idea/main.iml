@@ -28,8 +28,8 @@
       <excludeFolder url="file://$MODULE_DIR$/lab/src/xelt/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/xenharmonicSeries/package/dist" />
       <excludeFolder url="file://$MODULE_DIR$/lab/src/zdaubyaos/package/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/pattern/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/pattern/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/registry/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/registry/dist" />
       <excludeFolder url="file://$MODULE_DIR$/performer/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/performer/dist" />
       <excludeFolder url="file://$MODULE_DIR$/playroom/.idea" />
