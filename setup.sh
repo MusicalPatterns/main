@@ -2,7 +2,7 @@
 
 set -e
 
-PATHS="export PATH=\$PATH:~/workspace/MusicalPatterns/main/cli/node_modules/.bin/:~/workspace/MusicalPatterns/main/compiler/node_modules/.bin/:~/workspace/MusicalPatterns/main/lab/node_modules/.bin/:~/workspace/MusicalPatterns/main/registry/node_modules/.bin/:~/workspace/MusicalPatterns/main/performer/node_modules/.bin/:~/workspace/MusicalPatterns/main/playroom/node_modules/.bin/:~/workspace/MusicalPatterns/main/utilities/node_modules/.bin:~/workspace/MusicalPatterns/main/utilitiesPattern/node_modules/.bin"
+PATHS="export PATH=\$PATH:~/workspace/MusicalPatterns/main/cli/node_modules/.bin/:~/workspace/MusicalPatterns/main/compiler/node_modules/.bin/:~/workspace/MusicalPatterns/main/lab/node_modules/.bin/:~/workspace/MusicalPatterns/main/registry/node_modules/.bin/:~/workspace/MusicalPatterns/main/performer/node_modules/.bin/:~/workspace/MusicalPatterns/main/playroom/node_modules/.bin/:~/workspace/MusicalPatterns/main/utilities/node_modules/.bin:~/workspace/MusicalPatterns/main/pattern/node_modules/.bin"
 sed -i -e "/${PATHS//\//\\/}/d" ~/.bash_profile
 echo ${PATHS} >> ~/.bash_profile
 

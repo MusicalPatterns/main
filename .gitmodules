@@ -7,6 +7,9 @@
 [submodule "lab"]
 	path = lab
 	url = https://github.com/MusicalPatterns/lab.git
+[submodule "pattern"]
+	path = pattern
+	url = https://github.com/MusicalPatterns/pattern.git
 [submodule "performer"]
 	path = performer
 	url = https://github.com/MusicalPatterns/performer.git
@@ -19,6 +22,3 @@
 [submodule "utilities"]
 	path = utilities
 	url = https://github.com/MusicalPatterns/utilities.git
-[submodule "utilitiesPattern"]
-	path = utilitiesPattern
-	url = https://github.com/MusicalPatterns/utilities-pattern.git

@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/fake_npm_cli" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_compiler" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_lab" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/fake_npm_pattern" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_performer" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_playroom" vcs="none" />
     <mapping directory="$PROJECT_DIR$/fake_npm_registry" vcs="none" />
@@ -24,10 +25,10 @@
     <mapping directory="$PROJECT_DIR$/lab/src/xelt" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/xenharmonicSeries" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab/src/zdaubyaos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pattern" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/performer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/playroom" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/registry" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/utilities" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/utilitiesPattern" vcs="Git" />
   </component>
 </project>
