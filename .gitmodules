@@ -1,24 +1,57 @@
 [submodule "cli"]
-	path = cli
+	path = services/cli
 	url = git@github.com:MusicalPatterns/cli.git
 [submodule "compiler"]
-	path = compiler
+	path = services/compiler
 	url = git@github.com:MusicalPatterns/compiler.git
 [submodule "lab"]
-	path = lab
-	url = git@github.com:MusicalPatterns/lab.git
+	path = services/lab
+	url = git@github.com:MusicalPatterns/lab
 [submodule "pattern"]
-	path = pattern
+	path = services/pattern
 	url = git@github.com:MusicalPatterns/pattern.git
 [submodule "performer"]
-	path = performer
+	path = services/performer
 	url = git@github.com:MusicalPatterns/performer.git
 [submodule "playroom"]
-	path = playroom
+	path = services/playroom
 	url = git@github.com:MusicalPatterns/playroom.git
 [submodule "registry"]
-	path = registry
+	path = services/registry
 	url = git@github.com:MusicalPatterns/registry.git
 [submodule "utilities"]
-	path = utilities
+	path = services/utilities
 	url = git@github.com:MusicalPatterns/utilities.git
+[submodule "beatenPath"]
+	path = patterns/beatenPath
+	url = git@github.com:MusicalPatterns/pattern-beatenPath.git
+[submodule "hafuhafu"]
+	path = patterns/hafuhafu
+	url = git@github.com:MusicalPatterns/pattern-hafuhafu.git
+[submodule "houndstoothtopiaTheme"]
+	path = patterns/houndstoothtopiaTheme
+	url = git@github.com:MusicalPatterns/pattern-houndstoothtopiaTheme.git
+[submodule "omnizonk"]
+	path = patterns/omnizonk
+	url = git@github.com:MusicalPatterns/pattern-omnizonk.git
+[submodule "performerQa"]
+	path = patterns/performerQa
+	url = git@github.com:MusicalPatterns/pattern-performerQa.git
+[submodule "playroomTest"]
+	path = patterns/playroomTest
+	url = git@github.com:MusicalPatterns/pattern-playroomTest.git
+[submodule "stepwise"]
+	path = patterns/stepwise
+	url = git@github.com:MusicalPatterns/pattern-stepwise.git
+[submodule "template"]
+	path = patterns/template
+	url = git@github.com:MusicalPatterns/pattern-template.git
+[submodule "xelt"]
+	path = patterns/xelt
+	url = git@github.com:MusicalPatterns/pattern-xelt.git
+[submodule "xenharmonicSeries"]
+	path = patterns/xenharmonicSeries
+	url = git@github.com:MusicalPatterns/pattern-xenharmonicSeries.git
+[submodule "zdaubyaos"]
+	path = patterns/zdaubyaos
+	url = git@github.com:MusicalPatterns/pattern-zdaubyaos.git

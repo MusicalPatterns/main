@@ -1,19 +1,25 @@
 MAKEFLAGS += --no-print-directory
 
 commit:
-	@cli/bin/commit.sh
+	@services/cli/bin/commit.sh
 
 deploy:
 	@bin/deploy.sh
 
+lint:
+	@:
+
 new:
 	@bin/new.sh
 
+publish:
+	@:
+
 pull:
-	@cli/bin/pull.sh
+	@services/cli/bin/pull.sh
 
 push:
-	@cli/bin/push.sh
+	@services/cli/bin/push.sh
 
 service_ripple:
 	@bin/service_ripple.sh
@@ -21,14 +27,17 @@ service_ripple:
 setup:
 	@bin/setup.sh
 
+ship:
+	@services/cli/bin/ship.sh
+
 start:
 	@bin/start.sh
 
 stash:
-	@cli/bin/stash.sh
+	@services/cli/bin/stash.sh
 
 stash_pop:
-	@cli/bin/stash_pop.sh
+	@services/cli/bin/stash_pop.sh
 
 test:
 	@:

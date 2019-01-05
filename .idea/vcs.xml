@@ -2,33 +2,33 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/cli" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/compiler" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_cli" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_compiler" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_lab" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_pattern" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_performer" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_playroom" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_registry" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/fake_npm_utilities" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/lab" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/beatenPath" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/hafuhafu" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopiaTheme" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/houndstoothtopiaTheme/src/custom/coordinates/houndstoothOutline" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/omnizonk" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/performerQa" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/playroomTest" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/stepwise" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/template" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/xelt" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/xenharmonicSeries" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab/src/zdaubyaos" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/pattern" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/performer" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/playroom" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/registry" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/utilities" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/beatenPath" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/hafuhafu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/houndstoothtopiaTheme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/houndstoothtopiaTheme/src/custom/coordinates/houndstoothOutline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/omnizonk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/performerQa" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/playroomTest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/stepwise" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/template" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/xelt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/xenharmonicSeries" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/zdaubyaos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/compiler" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_cli" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_compiler" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_lab" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_pattern" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_performer" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_playroom" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_registry" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_utilities" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/lab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/pattern" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/performer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/playroom" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/registry" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/utilities" vcs="Git" />
   </component>
 </project>

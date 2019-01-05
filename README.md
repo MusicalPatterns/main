@@ -29,34 +29,36 @@ Starts up the `lab` locally.
 
 Updates dependencies, recursively.
 
-## cli
+## services
+
+### cli
 
 [README.md](https://github.com/MusicalPatterns/cli/blob/master/README.md)
 
-## compiler
+### compiler
 
 [README.md](https://github.com/MusicalPatterns/compiler/blob/master/README.md)
 
-## lab
+### lab
 
 [README.md](https://github.com/MusicalPatterns/lab/blob/master/README.md)
 
-## pattern
+### pattern
 
 [README.md](https://github.com/MusicalPatterns/pattern/blob/master/README.md)
 
-## performer
+### performer
 
 [README.md](https://github.com/MusicalPatterns/performer/blob/master/README.md)
 
-## playroom
+### playroom
 
 [README.md](https://github.com/MusicalPatterns/playroom/blob/master/README.md)
 
-## registry
+### registry
 
 [README.md](https://github.com/MusicalPatterns/registry/blob/master/README.md)
 
-## utilities
+### utilities
 
 [README.md](https://github.com/MusicalPatterns/utilities/blob/master/README.md)
