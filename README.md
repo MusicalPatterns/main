@@ -13,12 +13,12 @@ Sends the `lab` up to GCP.
 Sets up your environment, including cloning down all the projects as siblings to main.
 It's not always best to do your development in `main`.
 
-`make ship MSG="new wave"`
+`make service_ripple MSG="new wave"`
 
-Begins with the `cli` and working its way through the stack of intra-project dependencies up to the `lab`.
+Begins with the `cli` and working its way through the stack of services up to the `lab`.
 Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
 
-Use `make ship FROM="performer"` to ship but instead of from `cli`, resuming from performer.
+Use `make service_ripple FROM="performer"` to ship but instead of from `cli`, resuming from performer.
 This is useful if your ship command failed partway through and you have no need to waste time on lower-level repos again.
 
 `make start`

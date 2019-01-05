@@ -15,8 +15,8 @@ pull:
 push:
 	@cli/bin/push.sh
 
-ship:
-	@bin/ship.sh
+service_ripple:
+	@bin/service_ripple.sh
 
 setup:
 	@bin/setup.sh
