@@ -4,10 +4,10 @@ commit:
 	@cli/bin/commit.sh
 
 deploy:
-	@deploy.sh
+	@bin/deploy.sh
 
 new:
-	@new.sh
+	@bin/new.sh
 
 pull:
 	@cli/bin/pull.sh
@@ -16,13 +16,13 @@ push:
 	@cli/bin/push.sh
 
 ship:
-	@ship.sh
+	@bin/ship.sh
 
 setup:
-	@setup.sh
+	@bin/setup.sh
 
 start:
-	@start.sh
+	@bin/start.sh
 
 stash:
 	@cli/bin/stash.sh
@@ -34,4 +34,4 @@ test:
 	@:
 
 update:
-	@update.sh
+	@bin/update.sh
