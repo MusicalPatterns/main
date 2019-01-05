@@ -6,10 +6,6 @@ export PATTERN_ID=$(sed 's/^[[:upper:]]/\L&/;s/[[:upper:]]/\L_&/g' <<< ${PATTERN
 export PATTERN_TITLE=$(sed 's/^[[:upper:]]/\L&/;s/[[:upper:]]/\L\ &/g' <<< ${PATTERN} | sed 's/\b\(.\)/\u\1/g')
 export PATTERN_PACKAGE=$(sed 's/^[[:upper:]]/\L&/;s/[[:upper:]]/\L\-&/g' <<< ${PATTERN})
 
-echo $PATTERN_ID
-echo $PATTERN_TITLE
-echo $PATTERN_PACKAGE
-
 create_pattern_repo() {
 	set +e
 	git ls-remote git@github.com:MusicalPatterns/pattern-${PATTERN} > /dev/null 2>&1
