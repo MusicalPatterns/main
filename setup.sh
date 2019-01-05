@@ -38,4 +38,5 @@ pull_recursively() {
 	git pull -r || return
 	git submodule foreach pull_recursively
 }
+export -f pull_recursively
 pull_recursively
