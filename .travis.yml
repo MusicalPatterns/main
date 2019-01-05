@@ -2,5 +2,7 @@ language: node_js
 git:
   submodules: false
 before_install:
-  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules || true
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' patterns/**.gitmodules || true
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' services/**.gitmodules || true
   - git submodule update --init --recursive
