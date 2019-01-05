@@ -86,10 +86,18 @@ add_pattern() {
 }
 
 exclude_pattern_directories() {
+	sed -i "/${PATTERN}\/node_modules/d" .idea/main.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/node_modules\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/node_modules\" \/>" .idea/main.iml || return
 	sed -i "/${PATTERN}\/dist/d" .idea/main.iml || return
 	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/dist\" \/>" .idea/main.iml || return
+	sed -i "/${PATTERN}\/\.idea/d" .idea/main.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/template\/\.idea\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/lab\/src\/${PATTERN}\/\.idea\" \/>" .idea/main.iml || return
+	sed -i "/${PATTERN}\/node_modules/d" lab/.idea/lab.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/node_modules\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/node_modules\" \/>" lab/.idea/lab.iml || return
 	sed -i "/${PATTERN}\/dist/d" lab/.idea/lab.iml || return
 	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/dist\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/dist\" \/>" lab/.idea/lab.iml || return
+	sed -i "/${PATTERN}\/\.idea/d" lab/.idea/lab.iml || return
+	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/template\/\.idea\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/src\/${PATTERN}\/\.idea\" \/>" lab/.idea/lab.iml || return
 }
 
 create_pattern_repo
