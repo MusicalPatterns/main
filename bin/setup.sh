@@ -2,7 +2,28 @@
 
 set -e
 
-PATHS="export PATH=\$PATH:~/workspace/MusicalPatterns/main/cli/node_modules/.bin/:~/workspace/MusicalPatterns/main/compiler/node_modules/.bin/:~/workspace/MusicalPatterns/main/lab/node_modules/.bin/:~/workspace/MusicalPatterns/main/registry/node_modules/.bin/:~/workspace/MusicalPatterns/main/performer/node_modules/.bin/:~/workspace/MusicalPatterns/main/playroom/node_modules/.bin/:~/workspace/MusicalPatterns/main/utilities/node_modules/.bin:~/workspace/MusicalPatterns/main/pattern/node_modules/.bin"
+PATHS="export PATH=\$PATH"\
+":~/workspace/MusicalPatterns/main/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/cli/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/compiler/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/lab/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/pattern/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/performer/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/playroom/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/registry/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/services/utilities/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/beatenPath/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/hafuhafu/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/houndstoothtopiaTheme/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/omnizonk/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/performerQa/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/playroomTest/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/stepwise/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/template/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/xelt/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/xenharmonicSeries/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/zdaubyaos/node_modules/.bin/"\
+""
 sed -i -e "/${PATHS//\//\\/}/d" ~/.bash_profile
 echo ${PATHS} >> ~/.bash_profile
 
