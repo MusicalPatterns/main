@@ -48,9 +48,9 @@ register_pattern() {
 	done < registry/src/registry.ts
 	sed -i "${LINE_NUMBER}i\ \ \ \ ${PATTERN_ID} = '${PATTERN_ID}'," registry/src/registry.ts
 
-	pushd registry
+	pushd registry > /dev/null 2>&1
 		make ship MSG="registering ${PATTERN_ID}" PATTERN=""
-	popd
+	popd > /dev/null 2>&1
 }
 
 add_pattern() {
@@ -59,7 +59,7 @@ add_pattern() {
 		return
 	fi
 
-	pushd lab
+	pushd lab > /dev/null 2>&1
 		make update || return
 		make update PATTERN=template || return
 
@@ -69,7 +69,7 @@ add_pattern() {
 
 		cp -r src/template/* ${PATTERN_DIR} || return
 
-		pushd ${PATTERN_DIR}
+		pushd ${PATTERN_DIR} > /dev/null 2>&1
 			sed -i "s/Template/${PATTERN_TITLE}/g" README.md || return
 			sed -i "s/pattern-template\.svg\?branch/pattern-${PATTERN}\.svg\?branch/g" README.md || return
 			sed -i "s/copy\ me\ for\ quicker\ provisioning\ of\ new\ patterns/description\ TBA/g" README.md || return
@@ -81,8 +81,8 @@ add_pattern() {
 			sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package.json || return
 			sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PATTERN_PACKAGE}\"/g" package-lock.json || return
 			npm version 1.0.0
-		popd
-	popd
+		popd > /dev/null 2>&1
+	popd > /dev/null 2>&1
 }
 
 exclude_pattern_directories() {

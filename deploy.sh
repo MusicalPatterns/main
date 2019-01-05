@@ -3,7 +3,7 @@
 set -e
 
 gcloud config configurations activate musical-patterns
-pushd lab
+pushd lab > /dev/null 2>&1
 	make build
 	gcloud app deploy -q
-popd
+popd > /dev/null 2>&1
