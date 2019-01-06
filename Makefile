@@ -1,4 +1,9 @@
-MAKEFLAGS += --no-print-directory
+SHELL := /bin/bash
+
+MAKEFLAGS += --no-print-directory --always-make
+
+Makefile:
+	@:
 
 commit:
 	@services/cli/bin/commit.sh
