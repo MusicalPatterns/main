@@ -20,6 +20,3 @@ do
 		make ship MSG="${MSG}"
 	popd > /dev/null 2>&1
 done
-
-make commit
-make push
