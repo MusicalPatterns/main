@@ -108,11 +108,17 @@ exclude_pattern_directories() {
 	sed -i "/<excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/patterns\/template\/\.idea\" \/>/a \ \ \ \ \ \ <excludeFolder url=\"file:\/\/\$MODULE_DIR\$\/patterns\/${PATTERN}\/\.idea\" \/>" .idea/main.iml || return
 }
 
+add_pattern_package_binaries_to_path() {
+	sed -i "/${PATTERN}\/node_modules\/\.bin\//d" bin/setup.sh || return
+	sed -i '/template\/node_modules\/\.bin\//a ":~/workspace/MusicalPatterns/main/patterns/'${PATTERN}'/node_modules/.bin/"\\' bin/setup.sh || return
+}
+
 create_pattern_repo
 register_pattern
 submodule_pattern
 clone_pattern_from_template
 include_pattern_in_lab
 exclude_pattern_directories
+add_pattern_package_binaries_to_path
 
 make setup
