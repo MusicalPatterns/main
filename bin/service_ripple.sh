@@ -2,7 +2,7 @@
 
 set -e
 
-SERVICES=("cli" "utilities" "performer" "compiler" "pattern" "registry" "playroom" "lab")
+SERVICES=("cli" "utilities" "performer" "compiler" "snapshot" "pattern" "registry" "playroom" "lab")
 FROM_INDEX=0
 for i in "${!SERVICES[@]}" ; do
 	if [[ "${SERVICES[i]}" = "${FROM}" ]] ; then

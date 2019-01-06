@@ -55,3 +55,6 @@
 [submodule "zdaubyaos"]
 	path = patterns/zdaubyaos
 	url = git@github.com:MusicalPatterns/pattern-zdaubyaos.git
+[submodule "snapshot"]
+	path = services/snapshot
+	url = git@github.com:MusicalPatterns/snapshot.git

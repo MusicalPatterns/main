@@ -29,6 +29,7 @@
     <mapping directory="$PROJECT_DIR$/services/performer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/playroom" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/registry" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/snapshot" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/utilities" vcs="Git" />
   </component>
 </project>
