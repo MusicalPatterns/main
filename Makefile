@@ -14,6 +14,9 @@ deploy:
 lint:
 	@:
 
+match_config:
+	@:
+
 new:
 	@bin/new.sh
 

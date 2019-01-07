@@ -94,7 +94,7 @@ include_pattern_in_lab() {
 			echo "${PATTERN_PACKAGE} already installed into the lab service."
 		else
 			npm i -D @musical-patterns/pattern-${PATTERN_PACKAGE}
-			echo "export { pattern as ${PATTERN_ID} } from '@musical-patterns/pattern-${PATTERN_PACKAGE}'" >> src/patterns.ts
+			echo "export { pattern as ${PATTERN_ID} } from '@musical-patterns/pattern-${PATTERN_PACKAGE}'" >> src/allPatterns.ts
 		fi
 	popd > /dev/null 2>&1
 }
