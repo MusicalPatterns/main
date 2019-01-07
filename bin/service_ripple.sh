@@ -20,3 +20,6 @@ do
 		make ship MSG="${MSG}"
 	popd > /dev/null 2>&1
 done
+
+git submodule foreach npm update
+make ship MSG="${MSG}"
