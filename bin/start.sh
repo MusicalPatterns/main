@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 pushd services/lab > /dev/null 2>&1
-	webpack-dev-server --config webpack.dev.js --color
+	webpack-dev-server --config webpack.lab.js --color
 popd > /dev/null 2>&1
