@@ -4,6 +4,6 @@ set -e
 
 gcloud config configurations activate musical-patterns
 pushd services/lab > /dev/null 2>&1
-	make build
+	node -r ts-node/register --max-old-space-size=4096 node_modules/webpack/bin/webpack.js --config webpack.lab.js
 	gcloud app deploy -q
 popd > /dev/null 2>&1
