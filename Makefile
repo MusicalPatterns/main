@@ -11,6 +11,9 @@ commit:
 deploy:
 	@bin/deploy.sh
 
+fast_ship:
+	@services/cli/bin/fast_ship.sh
+
 lint:
 	@:
 
