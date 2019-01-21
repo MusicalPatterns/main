@@ -8,17 +8,29 @@
 
 Sends the `lab` up to GCP.
 
+`make new pattern=myPattern`
+
+Adds a new pattern to Musical Patterns.
+
+- creates a new repo in the `MusicalPatterns` GitHub org
+- register pattern in the `@musical-patterns/pattern` service
+- submodule the pattern under the `patterns/` directory
+- initializes the pattern code by cloning from the `@musical-patterns/pattern-template` repo
+- includes the pattern in the `@musical-patterns/lab` so that it will be deployed
+- excludes directories in the `patterns/` directory from the IDE
+- adds the pattern's `node_modules/.bin` to the `$PATH`
+
 `make setup`
 
 Sets up your environment, including cloning down all the projects as siblings to main.
 It's not always best to do your development in `main`.
 
-`make service_ripple MSG="new wave"`
+`make service-ripple msg="new wave"`
 
 Begins with the `cli` and working its way through the stack of services up to the `lab`.
 Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
 
-Use `make service_ripple FROM="performer"` to ship but instead of from `cli`, resuming from performer.
+Use `make service-ripple from="performer"` to ship but instead of from `cli`, resuming from performer.
 This is useful if your ship command failed partway through and you have no need to waste time on lower-level repos again.
 
 `make start`
@@ -54,10 +66,6 @@ Updates dependencies, recursively.
 ### playroom
 
 [README.md](https://github.com/MusicalPatterns/playroom/blob/master/README.md)
-
-### registry
-
-[README.md](https://github.com/MusicalPatterns/registry/blob/master/README.md)
 
 ### utilities
 

@@ -11,13 +11,13 @@ commit:
 deploy:
 	@bin/deploy.sh
 
-fast_ship:
-	@services/cli/bin/fast_ship.sh
+fast-ship:
+	@services/cli/bin/fast-ship.sh
 
 lint:
 	@:
 
-match_config:
+match-config:
 	@:
 
 new:
@@ -32,14 +32,14 @@ pull:
 push:
 	@services/cli/bin/push.sh
 
-service_ripple:
-	@bin/service_ripple.sh
+service-ripple:
+	@bin/service-ripple.sh
 
 setup:
 	@bin/setup.sh
 
 ship:
-	@services/cli/bin/ship.sh
+	@CLI_DIR=services/cli services/cli/bin/ship.sh
 
 start:
 	@bin/start.sh
@@ -47,8 +47,8 @@ start:
 stash:
 	@services/cli/bin/stash.sh
 
-stash_pop:
-	@services/cli/bin/stash_pop.sh
+stash-pop:
+	@services/cli/bin/stash-pop.sh
 
 test:
 	@:

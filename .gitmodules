@@ -16,9 +16,6 @@
 [submodule "playroom"]
 	path = services/playroom
 	url = git@github.com:MusicalPatterns/playroom.git
-[submodule "registry"]
-	path = services/registry
-	url = git@github.com:MusicalPatterns/registry.git
 [submodule "utilities"]
 	path = services/utilities
 	url = git@github.com:MusicalPatterns/utilities.git

@@ -2,10 +2,10 @@
 
 set -e
 
-SERVICES=("cli" "utilities" "performer" "compiler" "pattern" "snapshot" "registry" "playroom" "lab")
+SERVICES=("cli" "utilities" "performer" "compiler" "pattern" "snapshot" "playroom" "lab")
 FROM_INDEX=0
 for i in "${!SERVICES[@]}" ; do
-	if [[ "${SERVICES[i]}" = "${FROM}" ]] ; then
+	if [[ "${SERVICES[i]}" = "${from}" ]] ; then
 		FROM_INDEX=i
 		break
 	fi
@@ -17,9 +17,9 @@ for SERVICE in "${SERVICES[@]}"
 do
 	pushd services/${SERVICE} > /dev/null 2>&1
 		npm update
-		make ship MSG="${MSG}"
+		make ship msg="${msg}"
 	popd > /dev/null 2>&1
 done
 
 git submodule foreach npm update
-make ship MSG="${MSG}"
+make ship msg="${msg}"

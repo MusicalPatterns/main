@@ -10,7 +10,6 @@ PATHS="export PATH=\$PATH"\
 ":~/workspace/MusicalPatterns/main/services/pattern/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/services/performer/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/services/playroom/node_modules/.bin/"\
-":~/workspace/MusicalPatterns/main/services/registry/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/services/utilities/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/beatenPath/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/hafuhafu/node_modules/.bin/"\

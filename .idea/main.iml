@@ -67,12 +67,15 @@
       <excludeFolder url="file://$MODULE_DIR$/services/registry/dist" />
       <excludeFolder url="file://$MODULE_DIR$/services/registry/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/services/snapshot/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/services/snapshot/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/services/snapshot/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/services/utilities/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/services/utilities/dist" />
       <excludeFolder url="file://$MODULE_DIR$/services/utilities/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
+    <content url="file://$MODULE_DIR$/services/snapshot/node_modules" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
