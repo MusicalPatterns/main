@@ -38,7 +38,6 @@ gcloud config set account kingwoodchuckii@gmail.com
 npm config set git-tag-version=false
 #npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
 npm config delete script-shell
-npm i -g npm-check-updates
 
 git config --get user.name > /dev/null 2>&1
 if [[ $? -ne 0 ]] ; then
