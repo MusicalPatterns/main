@@ -2,7 +2,8 @@
 
 set -e
 
-SERVICES=("cli" "utilities" "performer" "compiler" "pattern" "snapshot" "playroom" "lab")
+. services/cli/bin/non_cli/services.sh
+
 FROM_INDEX=0
 for i in "${!SERVICES[@]}" ; do
 	if [[ "${SERVICES[i]}" = "${from}" ]] ; then
