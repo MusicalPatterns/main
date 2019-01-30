@@ -19,6 +19,7 @@ PATHS="export PATH=\$PATH"\
 ":~/workspace/MusicalPatterns/main/patterns/playroomTest/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/stepwise/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/template/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/tsraxcfaubdj/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/xelt/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/xenharmonicSeries/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/zdaubyaos/node_modules/.bin/"\
@@ -54,9 +55,9 @@ fi
 git config --global core.autocrlf false
 git config --global core.eol lf
 
-pull_recursively() {
-	git checkout master || return
+pull_recursively() { # whenever this is updated, please compare with @musical-patterns/cli/bin/pull.sh
 	git submodule update --init --recursive || return
+	git checkout master || return
 	git pull -r || return
 	git submodule foreach pull_recursively
 }

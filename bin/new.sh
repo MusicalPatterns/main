@@ -60,14 +60,14 @@ submodule_pattern() {
 }
 
 clone_pattern_from_template() {
-	if [[ "$(ls -A patterns/${pattern})" != "" ]] ; then
+	if [[ -f patterns/${pattern}/README.md ]] ; then
 		echo "${pattern} already initialized by cloning from the template pattern."
 		return
 	fi
 
 	DIR=patterns/${pattern}/
 
-	cp -r patterns/template/* ${DIR} || return
+	cp -r patterns/template ${DIR} || return
 
 	pushd ${DIR} > /dev/null 2>&1
 		sed -i "s/Template/${TITLE}/g" README.md || return
@@ -85,6 +85,9 @@ clone_pattern_from_template() {
 		sed -i "s/template/${pattern}/g" .idea/modules.xml || return
 
 		npm version 1.0.0
+		npm i
+		npm update
+		make publish
 	popd > /dev/null 2>&1
 }
 
@@ -120,5 +123,3 @@ clone_pattern_from_template
 include_pattern_in_lab
 exclude_pattern_directories
 add_pattern_package_binaries_to_path
-
-make setup
