@@ -31,22 +31,47 @@ register_pattern() {
 	fi
 	set -e
 
-	sed -i "/${ID}/d" ${REGISTRY_FILE}
 	LINE_NUMBER=0
-	IN_REGISTRY=false
+	FOUND_REGISTRY_SECTION_OF_FILE=false
 	while read LINE ; do
 		LINE_NUMBER=$((LINE_NUMBER+1))
-		if [[ "${IN_REGISTRY}" == true && ${LINE} > ${ID} ]] ; then
+		if [[ "${FOUND_REGISTRY_SECTION_OF_FILE}" == true && ${LINE} > ${ID} ]] ; then
 			break
 		fi
 		if [[ ${LINE} == "enum Id {" ]] ; then
-			IN_REGISTRY=true
+			FOUND_REGISTRY_SECTION_OF_FILE=true
 		fi
 	done < ${REGISTRY_FILE}
 	sed -i "${LINE_NUMBER}i\ \ \ \ ${ID} = '${ID}'," ${REGISTRY_FILE}
+}
 
+filter_pattern() {
+	set +e
+	FILTER_FILE=services/pattern/src/filter.ts
+	grep -q ${ID} ${FILTER_FILE}
+	if [[ $? == 0 ]] ; then
+		echo "${ID} pattern ID already filtered with the pattern service."
+		return
+	fi
+	set -e
+
+	LINE_NUMBER=0
+	FOUND_FILTER_SECTION_OF_FILE=false
+	while read LINE ; do
+		LINE_NUMBER=$((LINE_NUMBER+1))
+		if [[ "${FOUND_FILTER_SECTION_OF_FILE}" == true && ${LINE} > ${ID} ]] ; then
+			break
+		fi
+		if [[ ${LINE} == "const idsToFilter: Id[] = [" ]] ; then
+			FOUND_FILTER_SECTION_OF_FILE=true
+		fi
+	done < ${FILTER_FILE}
+	sed -i "${LINE_NUMBER}i\ \ \ \ Id.${ID}," ${FILTER_FILE}
+}
+
+publish_updated_pattern_service() {
 	pushd services/pattern > /dev/null 2>&1
-		make ship msg="registering ${ID}" pattern=""
+		make ship msg="registering & filtering ${ID}"
 	popd > /dev/null 2>&1
 }
 
@@ -118,6 +143,8 @@ add_pattern_package_binaries_to_path() {
 
 create_pattern_repo
 register_pattern
+filter_pattern
+publish_updated_pattern_service
 submodule_pattern
 clone_pattern_from_template
 include_pattern_in_lab
