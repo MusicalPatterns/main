@@ -58,3 +58,6 @@
 [submodule "tsraxcfaubdj"]
 	path = patterns/tsraxcfaubdj
 	url = git@github.com:MusicalPatterns/pattern-tsraxcfaubdj.git
+[submodule "moeom"]
+	path = patterns/moeom
+	url = git@github.com:MusicalPatterns/pattern-moeom.git

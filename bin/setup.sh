@@ -19,6 +19,7 @@ PATHS="export PATH=\$PATH"\
 ":~/workspace/MusicalPatterns/main/patterns/playroomTest/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/stepwise/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/template/node_modules/.bin/"\
+":~/workspace/MusicalPatterns/main/patterns/moeom/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/tsraxcfaubdj/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/xelt/node_modules/.bin/"\
 ":~/workspace/MusicalPatterns/main/patterns/xenharmonicSeries/node_modules/.bin/"\
