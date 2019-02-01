@@ -84,8 +84,8 @@ submodule_pattern() {
 	git submodule add --force --name ${pattern} git@github.com:MusicalPatterns/pattern-${pattern}.git patterns/${pattern} || return
 }
 
-clone_pattern_from_template() {
-	if [[ -f patterns/${pattern}/README.md ]] ; then
+clone_pattern_from_template_and_publish_it() {
+	if [[ -f patterns/${pattern}/LICENSE ]] ; then
 		echo "${pattern} already initialized by cloning from the template pattern."
 		return
 	fi
@@ -146,7 +146,7 @@ register_pattern
 filter_pattern
 publish_updated_pattern_service
 submodule_pattern
-clone_pattern_from_template
+clone_pattern_from_template_and_publish_it
 include_pattern_in_lab
 exclude_pattern_directories
 add_pattern_package_binaries_to_path
