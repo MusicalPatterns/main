@@ -123,6 +123,7 @@ include_pattern_in_lab() {
 		else
 			npm i -D @musical-patterns/pattern-${PACKAGE}
 			echo "export { pattern as ${ID} } from '@musical-patterns/pattern-${PACKAGE}'" >> src/allPatterns.ts
+			make ship msg="including ${ID}"
 		fi
 	popd > /dev/null 2>&1
 }
