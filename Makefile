@@ -39,7 +39,7 @@ setup:
 	@bin/setup.sh
 
 ship:
-	@CLI_DIR=services/cli services/cli/bin/ship.sh
+	@CLI_DIR=services/cli/ services/cli/bin/ship.sh
 
 start:
 	@bin/start.sh
