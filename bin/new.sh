@@ -92,7 +92,7 @@ clone_pattern_from_template_and_publish_it() {
 
 	DIR=patterns/${pattern}/
 
-	cp -r patterns/template ${DIR} || return
+	cp -r patterns/template/. ${DIR} || return
 
 	pushd ${DIR} > /dev/null 2>&1
 		sed -i "s/Template/${TITLE}/g" README.md || return
