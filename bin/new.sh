@@ -59,7 +59,7 @@ filter_pattern() {
 	FOUND_FILTER_SECTION_OF_FILE=false
 	while read LINE ; do
 		LINE_NUMBER=$((LINE_NUMBER+1))
-		if [[ "${FOUND_FILTER_SECTION_OF_FILE}" == true && ${LINE} > ${ID} ]] ; then
+		if [[ "${FOUND_FILTER_SECTION_OF_FILE}" == true && ${LINE:7} > ${ID} ]] ; then
 			break
 		fi
 		if [[ ${LINE} == "const idsToFilter: Id[] = [" ]] ; then
