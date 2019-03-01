@@ -45,6 +45,12 @@ register_pattern_with_cli_service() {
 	sed -i "${LINE_NUMBER}i\"${PACKAGE}\"" ${CLI_REGISTRY_FILE}
 }
 
+publish_updated_cli_service() {
+	pushd services/cli > /dev/null 2>&1
+		make ship msg="registering ${PACKAGE} with CLI"
+	popd > /dev/null 2>&1
+}
+
 register_pattern_with_pattern_service() {
 	set +e
 	REGISTRY_FILE=services/pattern/src/registry.ts
@@ -95,7 +101,7 @@ filter_pattern() {
 
 publish_updated_pattern_service() {
 	pushd services/pattern > /dev/null 2>&1
-		make ship msg="registering & filtering ${ID}"
+		make ship msg="registering & filtering ${ID} in pattern service"
 	popd > /dev/null 2>&1
 }
 
@@ -116,7 +122,13 @@ clone_pattern_from_template_and_publish_it() {
 
 	DIR=patterns/${pattern}/
 
-	cp -r patterns/template/. ${DIR} || return
+	cp -r patterns/template/* ${DIR} || return
+	mkdir ${DIR}/.idea
+	cp -r patterns/template/.idea/* ${DIR}/.idea || return
+	cp patterns/template/.gitattributes ${DIR} || return
+	cp patterns/template/.gitignore ${DIR} || return
+	cp patterns/template/.npmignore ${DIR} || return
+	cp patterns/template/.travis.yml ${DIR} || return
 
 	pushd ${DIR} > /dev/null 2>&1
 		sed -i "s/Template/${TITLE}/g" README.md || return
@@ -167,12 +179,19 @@ add_pattern_package_binaries_to_path() {
 }
 
 create_pattern_repo
+
 register_pattern_with_cli_service
+publish_updated_cli_service
+
 register_pattern_with_pattern_service
 filter_pattern
 publish_updated_pattern_service
+
 submodule_pattern
+
 clone_pattern_from_template_and_publish_it
+
 include_pattern_in_lab
+
 exclude_pattern_directories
 add_pattern_package_binaries_to_path
