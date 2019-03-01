@@ -61,3 +61,6 @@
 [submodule "moeom"]
 	path = patterns/moeom
 	url = git@github.com:MusicalPatterns/pattern-moeom.git
+[submodule "labAboutPage"]
+	path = patterns/labAboutPage
+	url = git@github.com:MusicalPatterns/pattern-labAboutPage.git
