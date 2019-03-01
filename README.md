@@ -13,10 +13,11 @@ Sends the `lab` up to GCP.
 Adds a new pattern to Musical Patterns.
 
 - creates a new repo in the `MusicalPatterns` GitHub org
+- register pattern in the `@musical-patterns/cli` service
 - register pattern in the `@musical-patterns/pattern` service
 - submodule the pattern under the `patterns/` directory
 - initializes the pattern code by cloning from the `@musical-patterns/pattern-template` repo
-- includes the pattern in the `@musical-patterns/lab` so that it will be deployed
+- includes the pattern in the `@musical-patterns/lab` so that it can be deployed (though it filters it initially, until it's ready)
 - excludes directories in the `patterns/` directory from the IDE
 - adds the pattern's `node_modules/.bin` to the `$PATH`
 
