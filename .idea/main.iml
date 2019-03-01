@@ -27,15 +27,12 @@
       <excludeFolder url="file://$MODULE_DIR$/patterns/stepwise/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/stepwise/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/template/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/patterns/labAboutPage/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/moeom/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/tsraxcfaubdj/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/template/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/patterns/labAboutPage/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/moeom/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/tsraxcfaubdj/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/template/node_modules" />
-      <excludeFolder url="file://$MODULE_DIR$/patterns/labAboutPage/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/moeom/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/tsraxcfaubdj/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/xelt/.idea" />
