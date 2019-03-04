@@ -61,3 +61,6 @@
 [submodule "moeom"]
 	path = patterns/moeom
 	url = git@github.com:MusicalPatterns/pattern-moeom.git
+[submodule "prototyper"]
+	path = patterns/prototyper
+	url = git@github.com:MusicalPatterns/pattern-prototyper.git

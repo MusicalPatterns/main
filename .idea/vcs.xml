@@ -10,6 +10,7 @@
     <mapping directory="$PROJECT_DIR$/patterns/omnizonk" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/performerQa" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/playroomTest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/prototyper" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/stepwise" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/template" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/tsraxcfaubdj" vcs="Git" />
