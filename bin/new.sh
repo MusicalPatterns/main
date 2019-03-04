@@ -114,7 +114,7 @@ submodule_pattern() {
 	git submodule add --force --name ${pattern} git@github.com:MusicalPatterns/pattern-${pattern}.git patterns/${pattern} || return
 }
 
-clone_pattern_from_template_and_publish_it() {
+clone_pattern_from_template_and_make_substitutions_and_ship_it() {
 	if [[ -f patterns/${pattern}/LICENSE ]] ; then
 		echo "${pattern} already initialized by cloning from the template pattern."
 		return
@@ -148,7 +148,7 @@ clone_pattern_from_template_and_publish_it() {
 		npm version 1.0.0
 		npm i
 		npm update
-		make publish
+		make fast-ship msg='cloned from template with distinguishing substitutions'
 	popd > /dev/null 2>&1
 }
 
@@ -178,6 +178,10 @@ add_pattern_package_binaries_to_path() {
 	sed -i '/template\/node_modules\/\.bin\//a ":~/workspace/MusicalPatterns/main/patterns/'${pattern}'/node_modules/.bin/"\\' bin/setup.sh || return
 }
 
+ship_main() {
+	make ship msg="introduce ${pattern}"
+}
+
 create_pattern_repo
 
 register_pattern_with_cli_service
@@ -189,9 +193,11 @@ publish_updated_pattern_service
 
 submodule_pattern
 
-clone_pattern_from_template_and_publish_it
+clone_pattern_from_template_and_make_substitutions_and_ship_it
 
 include_pattern_in_lab
 
 exclude_pattern_directories
 add_pattern_package_binaries_to_path
+
+ship_main
