@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-git submodule foreach npm update
+git submodule foreach make update
