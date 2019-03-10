@@ -31,9 +31,6 @@ It's not always best to do your development in `main`.
 Begins with the `cli` and working its way through the stack of services up to the `lab`.
 Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
 
-Use `make service-ripple from="performer"` to ship but instead of from `cli`, resuming from performer.
-This is useful if your ship command failed before it finished and you have no need to waste time on lower-level repos again.
-
 `make start`
 
 Starts up the `lab` locally.
