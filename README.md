@@ -32,7 +32,7 @@ Begins with the `cli` and working its way through the stack of services up to th
 Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
 
 Use `make service-ripple from="performer"` to ship but instead of from `cli`, resuming from performer.
-This is useful if your ship command failed partway through and you have no need to waste time on lower-level repos again.
+This is useful if your ship command failed before it finished and you have no need to waste time on lower-level repos again.
 
 `make start`
 
