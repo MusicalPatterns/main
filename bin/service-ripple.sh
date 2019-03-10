@@ -3,6 +3,7 @@
 set -e
 
 . services/cli/bin/non_cli/services.sh
+. services/cli/bin/non_cli/patterns.sh
 
 FROM_INDEX=0
 for i in "${!SERVICES[@]}" ; do
@@ -17,10 +18,17 @@ SERVICES=("${SERVICES[@]:FROM_INDEX}")
 for SERVICE in "${SERVICES[@]}"
 do
 	pushd services/${SERVICE} > /dev/null 2>&1
-		npm update
+		make update
 		make ship msg="${msg}"
 	popd > /dev/null 2>&1
 done
 
-git submodule foreach npm update
+for PATTERN in "${PATTERNS[@]}"
+do
+	pushd patterns/${PATTERN} > /dev/null 2>&1
+		make update
+		make ship msg="${msg}"
+	popd > /dev/null 2>&1
+done
+
 make ship msg="${msg}"

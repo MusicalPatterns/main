@@ -29,9 +29,9 @@ create_pattern_repo() {
 register_pattern_with_cli_service() {
 	set +e
 	CLI_REGISTRY_FILE=services/cli/bin/non_cli/patterns.sh
-	grep -q ${PACKAGE} ${CLI_REGISTRY_FILE}
+	grep -q ${pattern} ${CLI_REGISTRY_FILE}
 	if [[ $? == 0 ]] ; then
-		echo "${PACKAGE} pattern already registered with the cli service."
+		echo "${pattern} pattern already registered with the cli service."
 		return
 	fi
 	set -e
@@ -40,14 +40,14 @@ register_pattern_with_cli_service() {
 	FOUND_REGISTRY_SECTION_OF_FILE=false
 	while read LINE ; do
 		LINE_NUMBER=$((LINE_NUMBER+1))
-		if [[ "${FOUND_REGISTRY_SECTION_OF_FILE}" == true && ${LINE} > ${PACKAGE} ]] ; then
+		if [[ "${FOUND_REGISTRY_SECTION_OF_FILE}" == true && ${LINE} > ${pattern} ]] ; then
 			break
 		fi
 		if [[ ${LINE} == "export PATTERNS=(" ]] ; then
 			FOUND_REGISTRY_SECTION_OF_FILE=true
 		fi
 	done < ${CLI_REGISTRY_FILE}
-	sed -i "${LINE_NUMBER}i\"${PACKAGE}\"" ${CLI_REGISTRY_FILE}
+	sed -i "${LINE_NUMBER}i\"${pattern}\"" ${CLI_REGISTRY_FILE}
 }
 
 publish_updated_cli_service() {
