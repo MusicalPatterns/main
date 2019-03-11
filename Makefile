@@ -50,6 +50,9 @@ stash:
 stash-pop:
 	@services/cli/bin/stash-pop.sh
 
+stop:
+	@services/cli/bin/stop.sh
+
 test:
 	@:
 
