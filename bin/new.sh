@@ -142,8 +142,8 @@ clone_pattern_from_template_and_make_substitutions_and_ship_it() {
 
 		FORMATTED_DATE=$(date +'%Y-%m-%d')
 		sed -i "s/Id.TEMPLATE/Id.${ID}/g" src/patterns.ts || return
-		sed -i "s/Template/${TITLE}/g" src/patterns.ts || return
-		sed -i "s/originalPublish:\ '2018-10-31/originalPublish:\ '${FORMATTED_DATE}/g" src/patterns.ts || return
+		sed -i "s/Template/${TITLE}/g" src/metadata/metadatas.ts || return
+		sed -i "s/originalPublish:\ '2018-10-31/originalPublish:\ '${FORMATTED_DATE}/g" src/metadata/metadatas.ts || return
 
 		sed -i "s/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-template\.git\"/\"url\": \"https:\/\/github\.com\/MusicalPatterns\/pattern-${pattern}\.git\"/g" package.json || return
 		sed -i "s/\"name\": \"@musical-patterns\/pattern-template\"/\"name\": \"@musical-patterns\/pattern-${PACKAGE}\"/g" package.json || return
