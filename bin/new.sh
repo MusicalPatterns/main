@@ -58,7 +58,7 @@ publish_updated_cli_service() {
 
 register_pattern_with_pattern_service() {
 	set +e
-	REGISTRY_FILE=services/pattern/src/registry.ts
+	REGISTRY_FILE=services/pattern/src/id/registry.ts
 	grep -q ${ID} ${REGISTRY_FILE}
 	if [[ $? == 0 ]] ; then
 		echo "${ID} pattern ID already registered with the pattern service."
@@ -82,7 +82,7 @@ register_pattern_with_pattern_service() {
 
 filter_pattern() {
 	set +e
-	FILTER_FILE=services/pattern/src/filter.ts
+	FILTER_FILE=services/pattern/src/id/filter.ts
 	grep -q ${ID} ${FILTER_FILE}
 	if [[ $? == 0 ]] ; then
 		echo "${ID} pattern ID already filtered with the pattern service."
