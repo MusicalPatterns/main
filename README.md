@@ -6,7 +6,7 @@
 
 `make deploy`
 
-Sends the `lab` up to GCP.
+Sends the `lab` up to whatever IaaS we're using at the time.
 
 `make new pattern=myPattern`
 
@@ -21,15 +21,15 @@ Adds a new pattern to Musical Patterns.
 - excludes directories in the `patterns/` directory from the IDE
 - adds the pattern's `node_modules/.bin` to the `$PATH`
 
-`make setup`
-
-Sets up your environment, including cloning down all the projects as siblings to main.
-It's not always best to do your development in `main`.
-
 `make service-ripple msg="new wave"`
 
 Begins with the `cli` and working its way through the stack of services up to the `lab`.
 Each stop it updates dependencies, commits, pushes, and publishes. Everything but deploying the app.
+
+`make setup`
+
+Sets up your environment, including cloning down all the projects as siblings to main.
+It's not always best to do your development in `main`.
 
 `make start`
 
@@ -43,28 +43,60 @@ Updates dependencies, recursively.
 
 ### cli
 
+All about workflow. 
+Provides all the common commands, configuration, and dependencies for developing a Musical Patterns repo.
+Takes care of building, testing, linting, publishing, storing, and sharing the code in every other repo.
+
 [README.md](https://github.com/MusicalPatterns/cli/blob/master/README.md)
-
-### compiler
-
-[README.md](https://github.com/MusicalPatterns/compiler/blob/master/README.md)
-
-### lab
-
-[README.md](https://github.com/MusicalPatterns/lab/blob/master/README.md)
-
-### pattern
-
-[README.md](https://github.com/MusicalPatterns/pattern/blob/master/README.md)
-
-### performer
-
-[README.md](https://github.com/MusicalPatterns/performer/blob/master/README.md)
-
-### playroom
-
-[README.md](https://github.com/MusicalPatterns/playroom/blob/master/README.md)
 
 ### utilities
 
+Shared generic utilities for code, math, music, testing, and nominal typing used throughout the other repos.
+
 [README.md](https://github.com/MusicalPatterns/utilities/blob/master/README.md)
+
+### performer
+
+Given a pattern compiled by the `@musical-patterns/compiler`, hooks it up to the Web Audio and WebXR APIs and gives you the power to play it (and pause it, etc.)
+
+[README.md](https://github.com/MusicalPatterns/performer/blob/master/README.md)
+
+### compiler
+
+Takes whatever amazing craziness a given pattern calls for and compiles it down into a basic format playable by the `@musical-patterns/performer`.
+
+[README.md](https://github.com/MusicalPatterns/compiler/blob/master/README.md)
+
+### snapshot
+
+Uses the `@musical-patterns/compiler` to maintain an up-to-date copy of compiled pattern data in the repo.
+This `snapshot.json` file is tested against before each shipment, ensuring your pattern doesn't change if you don't mean it to.
+It also can be played directly by the `@musical-patterns/performer` if you are performing in an environment without a `@musical-patterns/compiler`, or simply don't need to modify the pattern's initial spec.
+
+[README.md](https://github.com/MusicalPatterns/snapshot/blob/master/README.md)
+
+### pattern
+
+Defines the structure of patterns, including how to configure their spec, provide metadata, presets, and custom validation.
+It is also the place where all patterns must be registered.
+It also provides standard settings and some additional utilities that don't belong with the `@musical-patterns/utilities` because they use Musical Patterns specific resources from `@musical-patterns/performer`, `@musical-patterns/compiler`, or `@musical-patterns/pattern`.
+
+[README.md](https://github.com/MusicalPatterns/pattern/blob/master/README.md)
+
+### playroom
+
+The web-based UI for playing (with) the patterns.
+Just call `setupPlayroom` with whichever patterns you want.
+
+[README.md](https://github.com/MusicalPatterns/playroom/blob/master/README.md)
+
+### lab
+
+The actual final web app which gets deployed online.
+A thin wrapper around a `@musical-patterns/playroom` which is set up with every ready-to-go pattern.
+
+[README.md](https://github.com/MusicalPatterns/lab/blob/master/README.md)
+
+## patterns
+
+Each pattern, like the services, is submoduled here.
