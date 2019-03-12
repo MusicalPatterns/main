@@ -77,9 +77,14 @@ It also can be played directly by the `@musical-patterns/performer` if you are p
 
 ### pattern
 
-Defines the structure of patterns, including how to configure their spec, provide metadata, presets, and custom validation.
-It is also the place where all patterns must be registered.
-It also provides standard settings and some additional utilities that don't belong with the `@musical-patterns/utilities` because they use Musical Patterns specific resources from `@musical-patterns/performer`, `@musical-patterns/compiler`, or `@musical-patterns/pattern`.
+Defines the structure of patterns: `{ material, metadata, spec }`.
+- `metadata` has no "effect" per se. It's the blog post, formatted name, timestamps, etc.
+- `material` is the code that makes the sounds: its properties and how they affect the output scales and voices and notes.
+- `spec` is the controls for the material: configuration for how the user can adjust the properties (constraints, custom validation, etc), and presets.
+Starting with `@musical-patterns/pattern` and continuing in `@musical-patterns/playroom` and all pattern repos, to help organize thought, a common module structure matching this structure is used.
+
+`@musical-patterns/pattern` is also the place where all patterns must be registered to get an ID.
+This service also provides standard settings and some additional utilities that don't belong with the `@musical-patterns/utilities` because they use Musical Patterns specific resources from `@musical-patterns/performer`, `@musical-patterns/compiler`, or `@musical-patterns/pattern`.
 
 [README.md](https://github.com/MusicalPatterns/pattern/blob/master/README.md)
 
@@ -100,3 +105,5 @@ A thin wrapper around a `@musical-patterns/playroom` which is set up with every 
 ## patterns
 
 Each pattern, like the services, is submoduled here.
+
+Each pattern has the `@musical-patterns/playroom` as a dependency such that one can start up a playroom with just that pattern to get quick feedback on how it's sounding.
