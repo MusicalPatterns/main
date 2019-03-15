@@ -12,7 +12,7 @@ deploy:
 	@bin/deploy.sh
 
 fast-ship:
-	@services/cli/bin/fast-ship.sh
+	@services/cli/bin/fast-ship.sh msg="${msg}"
 
 lint:
 	@:
@@ -39,7 +39,7 @@ setup:
 	@bin/setup.sh
 
 ship:
-	@CLI_DIR=services/cli/ services/cli/bin/ship.sh
+	@CLI_DIR=services/cli/ services/cli/bin/ship.sh msg="${msg}"
 
 start:
 	@bin/start.sh
