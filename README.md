@@ -21,6 +21,8 @@ Adds a new pattern to Musical Patterns.
 - excludes directories in the `patterns/` directory from the IDE
 - adds the pattern's `node_modules/.bin` to the `$PATH`
 
+You don’t need to use the `new` script for a new pattern within an existing pattern repo, only for new pattern repos.
+
 `make service-ripple msg="new wave"`
 
 Begins with the `cli` and working its way through the stack of services up to the `lab`.
