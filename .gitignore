@@ -7,3 +7,4 @@ dist/*
 !dist/.gitkeep
 patterns/fake_*
 services/fake_*
+bash.exe.stackdump
