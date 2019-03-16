@@ -21,10 +21,10 @@ do
 	popd > /dev/null 2>&1
 done
 
-pushd services/lab
+pushd services/lab > /dev/null 2>&1
 	make update
 	make deploy
 	make ship
-popd
+popd > /dev/null 2>&1
 
 make ship msg="${msg}"
