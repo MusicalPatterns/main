@@ -32,8 +32,8 @@ pull:
 push:
 	@services/cli/bin/push.sh
 
-service-ripple:
-	@bin/service-ripple.sh
+propagate:
+	@bin/propagate.sh
 
 setup:
 	@bin/setup.sh
