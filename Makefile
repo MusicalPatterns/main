@@ -15,7 +15,7 @@ fast-ship:
 	@services/cli/bin/fast-ship.sh msg="${msg}"
 
 lint:
-	@:
+	@bin/lint.sh
 
 match-config:
 	@:
