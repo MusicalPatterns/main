@@ -29,7 +29,7 @@ The omnicommand.
 Begins with the `cli` and works its way through the stack of services up to the `lab`.
 Each stop it updates dependencies, commits, pushes, and publishes.
 Then it combs over each pattern, updating them, committing, pushing, and publishing.
-Then it updates the lab with the updated patterns, deploys it, and ships one last time.
+Then it updates the lab with the updated patterns, deploys it, and ships one final time.
 Then it ships the whole `main` project.
 Expect this to take a pretty long time.
 
