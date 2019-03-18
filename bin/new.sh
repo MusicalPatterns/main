@@ -154,7 +154,7 @@ clone_pattern_from_template_and_make_substitutions_and_ship_it() {
 
 		npm version 1.0.0
 		npm i
-		make fast-ship msg='cloned from template with distinguishing substitutions'
+		make msg='cloned from template with distinguishing substitutions' fast=true
 	popd > /dev/null 2>&1
 }
 
