@@ -16,9 +16,13 @@
 [submodule "playroom"]
 	path = services/playroom
 	url = git@github.com:MusicalPatterns/playroom.git
+[submodule "snapshot"]
+	path = services/snapshot
+	url = git@github.com:MusicalPatterns/snapshot.git
 [submodule "utilities"]
 	path = services/utilities
 	url = git@github.com:MusicalPatterns/utilities.git
+
 [submodule "beatenPath"]
 	path = patterns/beatenPath
 	url = git@github.com:MusicalPatterns/pattern-beatenPath.git
@@ -28,6 +32,9 @@
 [submodule "houndstoothtopiaTheme"]
 	path = patterns/houndstoothtopiaTheme
 	url = git@github.com:MusicalPatterns/pattern-houndstoothtopiaTheme.git
+[submodule "moeom"]
+	path = patterns/moeom
+	url = git@github.com:MusicalPatterns/pattern-moeom.git
 [submodule "omnizonk"]
 	path = patterns/omnizonk
 	url = git@github.com:MusicalPatterns/pattern-omnizonk.git
@@ -37,12 +44,18 @@
 [submodule "playroomTest"]
 	path = patterns/playroomTest
 	url = git@github.com:MusicalPatterns/pattern-playroomTest.git
+[submodule "prototyper"]
+	path = patterns/prototyper
+	url = git@github.com:MusicalPatterns/pattern-prototyper.git
 [submodule "stepwise"]
 	path = patterns/stepwise
 	url = git@github.com:MusicalPatterns/pattern-stepwise.git
 [submodule "template"]
 	path = patterns/template
 	url = git@github.com:MusicalPatterns/pattern-template.git
+[submodule "tsraxcfaubdj"]
+	path = patterns/tsraxcfaubdj
+	url = git@github.com:MusicalPatterns/pattern-tsraxcfaubdj.git
 [submodule "xelt"]
 	path = patterns/xelt
 	url = git@github.com:MusicalPatterns/pattern-xelt.git
@@ -52,15 +65,3 @@
 [submodule "zdaubyaos"]
 	path = patterns/zdaubyaos
 	url = git@github.com:MusicalPatterns/pattern-zdaubyaos.git
-[submodule "snapshot"]
-	path = services/snapshot
-	url = git@github.com:MusicalPatterns/snapshot.git
-[submodule "tsraxcfaubdj"]
-	path = patterns/tsraxcfaubdj
-	url = git@github.com:MusicalPatterns/pattern-tsraxcfaubdj.git
-[submodule "moeom"]
-	path = patterns/moeom
-	url = git@github.com:MusicalPatterns/pattern-moeom.git
-[submodule "prototyper"]
-	path = patterns/prototyper
-	url = git@github.com:MusicalPatterns/pattern-prototyper.git
