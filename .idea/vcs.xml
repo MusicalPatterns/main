@@ -27,6 +27,7 @@
     <mapping directory="$PROJECT_DIR$/services/fake_npm_registry" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/fake_npm_utilities" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/lab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/services/material" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/pattern" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/performer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/playroom" vcs="Git" />

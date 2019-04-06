@@ -4,9 +4,18 @@
 [submodule "compiler"]
 	path = services/compiler
 	url = git@github.com:MusicalPatterns/compiler.git
+[submodule "id"]
+	path = services/id
+	url = git@github.com:MusicalPatterns/id.git
 [submodule "lab"]
 	path = services/lab
 	url = git@github.com:MusicalPatterns/lab
+[submodule "material"]
+	path = services/material
+	url = git@github.com:MusicalPatterns/material.git
+[submodule "metadata"]
+	path = services/metadata
+	url = git@github.com:MusicalPatterns/metadata.git
 [submodule "pattern"]
 	path = services/pattern
 	url = git@github.com:MusicalPatterns/pattern.git
@@ -19,6 +28,9 @@
 [submodule "snapshot"]
 	path = services/snapshot
 	url = git@github.com:MusicalPatterns/snapshot.git
+[submodule "spec"]
+	path = services/spec
+	url = git@github.com:MusicalPatterns/spec.git
 [submodule "utilities"]
 	path = services/utilities
 	url = git@github.com:MusicalPatterns/utilities.git

@@ -56,12 +56,12 @@ publish_updated_cli_service() {
 	popd > /dev/null 2>&1
 }
 
-register_pattern_with_pattern_service() {
+register_pattern_with_id_service() {
 	set +e
-	REGISTRY_FILE=services/pattern/src/id/registry.ts
+	REGISTRY_FILE=services/id/src/registry.ts
 	grep -q ${ID} ${REGISTRY_FILE}
 	if [[ $? == 0 ]] ; then
-		echo "${ID} pattern ID already registered with the pattern service."
+		echo "${ID} pattern ID already registered with the id service."
 		return
 	fi
 	set -e
@@ -80,9 +80,15 @@ register_pattern_with_pattern_service() {
 	sed -i "${LINE_NUMBER}i\ \ \ \ ${ID} = '${ID}'," ${REGISTRY_FILE}
 }
 
-filter_pattern() {
+publish_updated_id_service() {
+	pushd services/id > /dev/null 2>&1
+		make ship msg="registering ${ID} with id service"
+	popd > /dev/null 2>&1
+}
+
+filter_pattern_with_pattern_service() {
 	set +e
-	FILTER_FILE=services/pattern/src/id/filter.ts
+	FILTER_FILE=services/pattern/src/filter.ts
 	grep -q ${ID} ${FILTER_FILE}
 	if [[ $? == 0 ]] ; then
 		echo "${ID} pattern ID already filtered with the pattern service."
@@ -106,7 +112,7 @@ filter_pattern() {
 
 publish_updated_pattern_service() {
 	pushd services/pattern > /dev/null 2>&1
-		make ship msg="registering & filtering ${ID} in pattern service"
+		make ship msg="filtering ${ID} in pattern service"
 	popd > /dev/null 2>&1
 }
 
@@ -194,8 +200,10 @@ create_pattern_repo
 register_pattern_with_cli_service
 publish_updated_cli_service
 
-register_pattern_with_pattern_service
-filter_pattern
+register_pattern_with_id_service
+publish_updated_id_service
+
+filter_pattern_with_pattern_service
 publish_updated_pattern_service
 
 submodule_pattern
