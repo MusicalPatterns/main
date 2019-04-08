@@ -17,23 +17,21 @@
     <mapping directory="$PROJECT_DIR$/patterns/xenharmonicSeries" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/zdaubyaos" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/cli" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/services/compiler" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/fake_npm_cli" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/services/fake_npm_compiler" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_id" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/fake_npm_lab" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_material" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_metadata" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/fake_npm_pattern" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/services/fake_npm_performer" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/fake_npm_playroom" vcs="none" />
-    <mapping directory="$PROJECT_DIR$/services/fake_npm_registry" vcs="none" />
+    <mapping directory="$PROJECT_DIR$/services/fake_npm_spec" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/fake_npm_utilities" vcs="none" />
     <mapping directory="$PROJECT_DIR$/services/id" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/lab" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/material" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/metadata" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/pattern" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/services/performer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/playroom" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/services/snapshot" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/spec" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/services/utilities" vcs="Git" />
   </component>
