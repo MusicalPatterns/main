@@ -1,9 +1,6 @@
 [submodule "cli"]
 	path = services/cli
 	url = git@github.com:MusicalPatterns/cli.git
-[submodule "compiler"]
-	path = services/compiler
-	url = git@github.com:MusicalPatterns/compiler.git
 [submodule "id"]
 	path = services/id
 	url = git@github.com:MusicalPatterns/id.git
@@ -19,15 +16,9 @@
 [submodule "pattern"]
 	path = services/pattern
 	url = git@github.com:MusicalPatterns/pattern.git
-[submodule "performer"]
-	path = services/performer
-	url = git@github.com:MusicalPatterns/performer.git
 [submodule "playroom"]
 	path = services/playroom
 	url = git@github.com:MusicalPatterns/playroom.git
-[submodule "snapshot"]
-	path = services/snapshot
-	url = git@github.com:MusicalPatterns/snapshot.git
 [submodule "spec"]
 	path = services/spec
 	url = git@github.com:MusicalPatterns/spec.git
@@ -68,9 +59,6 @@
 [submodule "tsraxcfaubdj"]
 	path = patterns/tsraxcfaubdj
 	url = git@github.com:MusicalPatterns/pattern-tsraxcfaubdj.git
-[submodule "xelt"]
-	path = patterns/xelt
-	url = git@github.com:MusicalPatterns/pattern-xelt.git
 [submodule "xenharmonicSeries"]
 	path = patterns/xenharmonicSeries
 	url = git@github.com:MusicalPatterns/pattern-xenharmonicSeries.git

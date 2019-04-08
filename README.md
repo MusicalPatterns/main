@@ -62,36 +62,33 @@ Shared generic utilities for code, math, music, testing, and nominal typing used
 
 [README.md](https://github.com/MusicalPatterns/utilities/blob/master/README.md)
 
-### performer
+### id
 
-Given a pattern compiled by the `@musical-patterns/compiler`, hooks it up to the Web Audio and WebXR APIs and gives you the power to play it (and pause it, etc.)
+[README.md](https://github.com/MusicalPatterns/id/blob/master/README.md)
 
-[README.md](https://github.com/MusicalPatterns/performer/blob/master/README.md)
+### metadata
 
-### compiler
+[README.md](https://github.com/MusicalPatterns/metadata/blob/master/README.md)
 
-Takes whatever amazing craziness a given pattern calls for and compiles it down into a basic format playable by the `@musical-patterns/performer`.
+### spec
 
-[README.md](https://github.com/MusicalPatterns/compiler/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/spec/blob/master/README.md)
 
-### snapshot
+### material
 
-Uses the `@musical-patterns/compiler` to maintain an up-to-date copy of compiled pattern data in the repo.
-This `snapshot.json` file is tested against before each shipment, ensuring your pattern doesn't change if you don't mean it to.
-It also can be played directly by the `@musical-patterns/performer` if you are performing in an environment without a `@musical-patterns/compiler`, or simply don't need to modify the pattern's initial spec.
+Takes whatever amazing craziness a given pattern calls for and compiles it down into a basic playable format.
+Then hooks it up to the Web Audio and WebXR APIs and gives you the power to play it (and pause it, etc.)
 
-[README.md](https://github.com/MusicalPatterns/snapshot/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/material/blob/master/README.md)
 
 ### pattern
 
 Defines the structure of patterns: `{ material, metadata, spec }`.
+- `id` uniquely identifies each pattern.
 - `metadata` has no "effect" per se. It's the blog post, formatted name, timestamps, etc.
 - `material` is the code that makes the sounds: its properties and how they affect the output scales and voices and notes.
 - `spec` is the controls for the material: configuration for how the user can adjust the properties (constraints, custom validation, etc), and presets.
 Starting with `@musical-patterns/pattern` and continuing in `@musical-patterns/playroom` and all pattern repos, to help organize thought, a common module structure matching this structure is used.
-
-`@musical-patterns/pattern` is also the place where all patterns must be registered to get an ID.
-This service also provides standard settings and some additional utilities that don't belong with the `@musical-patterns/utilities` because they use Musical Patterns specific resources from `@musical-patterns/performer`, `@musical-patterns/compiler`, or `@musical-patterns/pattern`.
 
 [README.md](https://github.com/MusicalPatterns/pattern/blob/master/README.md)
 
