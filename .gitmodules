@@ -35,15 +35,15 @@
 [submodule "houndstoothtopiaTheme"]
 	path = patterns/houndstoothtopiaTheme
 	url = git@github.com:MusicalPatterns/pattern-houndstoothtopiaTheme.git
+[submodule "materialQa"]
+	path = patterns/materialQa
+	url = git@github.com:MusicalPatterns/pattern-materialQa.git
 [submodule "moeom"]
 	path = patterns/moeom
 	url = git@github.com:MusicalPatterns/pattern-moeom.git
 [submodule "omnizonk"]
 	path = patterns/omnizonk
 	url = git@github.com:MusicalPatterns/pattern-omnizonk.git
-[submodule "performerQa"]
-	path = patterns/performerQa
-	url = git@github.com:MusicalPatterns/pattern-performerQa.git
 [submodule "playroomTest"]
 	path = patterns/playroomTest
 	url = git@github.com:MusicalPatterns/pattern-playroomTest.git
