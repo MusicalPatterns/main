@@ -28,7 +28,7 @@ create_pattern_repo() {
 
 register_pattern_with_cli_service() {
 	set +e
-	CLI_REGISTRY_FILE=services/cli/bin/non_cli/patterns.sh
+	CLI_REGISTRY_FILE=services/cli/bin/support/patterns.sh
 	grep -q ${pattern} ${CLI_REGISTRY_FILE}
 	if [[ $? == 0 ]] ; then
 		echo "${pattern} pattern already registered with the cli service."

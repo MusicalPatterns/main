@@ -2,8 +2,8 @@
 
 set -e
 
-. services/cli/bin/non_cli/services.sh
-. services/cli/bin/non_cli/patterns.sh
+. services/cli/bin/support/services.sh
+. services/cli/bin/support/patterns.sh
 
 for SERVICE in "${SERVICES[@]}"
 do
