@@ -65,3 +65,6 @@
 [submodule "zdaubyaos"]
 	path = patterns/zdaubyaos
 	url = git@github.com:MusicalPatterns/pattern-zdaubyaos.git
+[submodule "bapbo"]
+	path = patterns/bapbo
+	url = git@github.com:MusicalPatterns/pattern-bapbo.git

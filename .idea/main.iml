@@ -33,8 +33,11 @@
       <excludeFolder url="file://$MODULE_DIR$/patterns/stepwise/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/stepwise/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/template/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/patterns/bapbo/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/template/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/patterns/bapbo/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/template/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/patterns/bapbo/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/tsraxcfaubdj/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/tsraxcfaubdj/dist" />
       <excludeFolder url="file://$MODULE_DIR$/patterns/tsraxcfaubdj/node_modules" />

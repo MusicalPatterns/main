@@ -112,6 +112,7 @@ filter_pattern_with_pattern_service() {
 
 publish_updated_pattern_service() {
 	pushd services/pattern > /dev/null 2>&1
+		make update # this does not always give enough time for the package version of the pattern service to be ready with the new pattern's id registered
 		make ship msg="filtering ${ID} in pattern service"
 	popd > /dev/null 2>&1
 }
