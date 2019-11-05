@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/bapbo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/beatenPath" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/hafuhafu" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/houndstoothtopiaTheme" vcs="Git" />
