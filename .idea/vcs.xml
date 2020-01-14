@@ -8,6 +8,7 @@
     <mapping directory="$PROJECT_DIR$/patterns/houndstoothtopiaTheme" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/houndstoothtopiaTheme/src/material/custom/coordinates/houndstoothOutline" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/materialQa" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/patterns/metMos" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/moeom" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/omnizonk" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/patterns/playroomTest" vcs="Git" />

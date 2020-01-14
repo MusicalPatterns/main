@@ -68,3 +68,6 @@
 [submodule "bapbo"]
 	path = patterns/bapbo
 	url = git@github.com:MusicalPatterns/pattern-bapbo.git
+[submodule "metMos"]
+	path = patterns/metMos
+	url = git@github.com:MusicalPatterns/pattern-metMos.git
