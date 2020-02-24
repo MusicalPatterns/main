@@ -26,6 +26,9 @@
 	path = services/utilities
 	url = git@github.com:MusicalPatterns/utilities.git
 
+[submodule "bapbo"]
+	path = patterns/bapbo
+	url = git@github.com:MusicalPatterns/pattern-bapbo.git
 [submodule "beatenPath"]
 	path = patterns/beatenPath
 	url = git@github.com:MusicalPatterns/pattern-beatenPath.git
@@ -38,6 +41,9 @@
 [submodule "materialQa"]
 	path = patterns/materialQa
 	url = git@github.com:MusicalPatterns/pattern-materialQa.git
+[submodule "metMos"]
+	path = patterns/metMos
+	url = git@github.com:MusicalPatterns/pattern-metMos.git
 [submodule "moeom"]
 	path = patterns/moeom
 	url = git@github.com:MusicalPatterns/pattern-moeom.git
@@ -65,9 +71,3 @@
 [submodule "zdaubyaos"]
 	path = patterns/zdaubyaos
 	url = git@github.com:MusicalPatterns/pattern-zdaubyaos.git
-[submodule "bapbo"]
-	path = patterns/bapbo
-	url = git@github.com:MusicalPatterns/pattern-bapbo.git
-[submodule "metMos"]
-	path = patterns/metMos
-	url = git@github.com:MusicalPatterns/pattern-metMos.git
