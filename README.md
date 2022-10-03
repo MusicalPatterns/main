@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/MusicalPatterns/main.svg?branch=master)](https://travis-ci.com/MusicalPatterns/main)
-
 # Musical Patterns - main
 
 ## development

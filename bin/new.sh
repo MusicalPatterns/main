@@ -144,7 +144,6 @@ clone_pattern_from_template_and_make_substitutions_and_ship_it() {
 
 	pushd ${DIR} > /dev/null 2>&1
 		sed -i "s/Template/${TITLE}/g" README.md || return
-		sed -i "s/travis-ci\.com\/MusicalPatterns\/pattern-template/travis-ci\.com\/MusicalPatterns\/pattern-${pattern}/g" README.md || return
 		sed -i "s/copy\ me\ for\ quicker\ provisioning\ of\ new\ patterns/description\ TBA/g" README.md || return
 
 		FORMATTED_DATE=$(date +'%Y-%m-%d')
