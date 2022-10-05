@@ -52,32 +52,32 @@ All about workflow.
 Provides all the common commands, configuration, and dependencies for developing a Musical Patterns repo.
 Takes care of building, testing, linting, publishing, storing, and sharing the code in every other repo.
 
-[README.md](https://github.com/MusicalPatterns/cli/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/cli/blob/main/README.md)
 
 ### utilities
 
 Shared generic utilities for code, math, music, testing, and nominal typing used throughout the other repos.
 
-[README.md](https://github.com/MusicalPatterns/utilities/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/utilities/blob/main/README.md)
 
 ### id
 
-[README.md](https://github.com/MusicalPatterns/id/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/id/blob/main/README.md)
 
 ### metadata
 
-[README.md](https://github.com/MusicalPatterns/metadata/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/metadata/blob/main/README.md)
 
 ### spec
 
-[README.md](https://github.com/MusicalPatterns/spec/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/spec/blob/main/README.md)
 
 ### material
 
 Takes whatever amazing craziness a given pattern calls for and compiles it down into a basic playable format.
 Then hooks it up to the Web Audio and WebXR APIs and gives you the power to play it (and pause it, etc.)
 
-[README.md](https://github.com/MusicalPatterns/material/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/material/blob/main/README.md)
 
 ### pattern
 
@@ -88,21 +88,21 @@ Defines the structure of patterns: `{ material, metadata, spec }`.
 - `spec` is the controls for the material: configuration for how the user can adjust the properties (constraints, custom validation, etc), and presets.
 Starting with `@musical-patterns/pattern` and continuing in `@musical-patterns/playroom` and all pattern repos, to help organize thought, a common module structure matching this structure is used.
 
-[README.md](https://github.com/MusicalPatterns/pattern/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/pattern/blob/main/README.md)
 
 ### playroom
 
 The web-based UI for playing (with) the patterns.
 Just call `setupPlayroom` with whichever patterns you want.
 
-[README.md](https://github.com/MusicalPatterns/playroom/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/playroom/blob/main/README.md)
 
 ### lab
 
 The actual final web app which gets deployed online.
 A thin wrapper around a `@musical-patterns/playroom` which is set up with every ready-to-go pattern.
 
-[README.md](https://github.com/MusicalPatterns/lab/blob/master/README.md)
+[README.md](https://github.com/MusicalPatterns/lab/blob/main/README.md)
 
 ## patterns
 
