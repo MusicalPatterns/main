@@ -2,69 +2,87 @@
 
 set -e
 
-PATHS="export PATH=\$PATH"\
-":~/workspace/my-projects/MusicalPatterns/main/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/cli/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/id/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/lab/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/material/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/metadata/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/pattern/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/playroom/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/spec/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/services/utilities/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/beatenPath/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/hafuhafu/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/houndstoothtopiaTheme/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/materialQa/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/moeom/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/omnizonk/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/playroomTest/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/prototyper/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/stepwise/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/template/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/metMos/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/bapbo/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/tsraxcfaubdj/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/xenharmonicSeries/node_modules/.bin/"\
-":~/workspace/my-projects/MusicalPatterns/main/patterns/zdaubyaos/node_modules/.bin/"\
-""
-sed -i -e "/${PATHS//\//\\/}/d" ~/.bash_profile
-echo ${PATHS} >> ~/.bash_profile
+echo "🎵 Musical Patterns Setup"
+echo "========================="
+echo ""
 
-if [[ $(gcloud config configurations list | grep -m1 musical-patterns) ]] ; then
-	echo "The 'musical-patterns' configuration already exists."
-else
-	gcloud config configurations create musical-patterns
+# Check Node version
+NODE_VERSION=$(node -v 2>/dev/null | cut -d'v' -f2 | cut -d'.' -f1)
+if [[ -z "$NODE_VERSION" ]]; then
+    echo "❌ Node.js is not installed. Please install Node.js 16.x"
+    echo "   We recommend using nvm: https://github.com/nvm-sh/nvm"
+    echo "   Then run: nvm install 16 && nvm use 16"
+    exit 1
+elif [[ "$NODE_VERSION" -gt 16 ]]; then
+    echo "⚠️  Warning: You're using Node.js v$(node -v | cut -d'v' -f2)"
+    echo "   This project requires Node 16 due to native dependencies (node-sass)."
+    echo "   Please run: nvm install 16 && nvm use 16"
+    echo "   Then re-run: make setup"
+    exit 1
 fi
-gcloud config configurations activate musical-patterns
-gcloud config set project musical-patterns
-gcloud config set account kingwoodchuckii@gmail.com
+echo "✓ Node.js v$(node -v | cut -d'v' -f2) detected"
 
-npm config set git-tag-version=false
-#npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
-npm config delete script-shell
+# Initialize all submodules (services and patterns)
+echo ""
+echo "📦 Initializing git submodules..."
+git submodule update --init --recursive
 
-git config --get user.name > /dev/null 2>&1
-if [[ $? -ne 0 ]] ; then
-    printf "${Yellow}Please set your global git user name: "
-    read USER_NAME
-    git config --global user.name ${USER_NAME}
-fi
-git config --get user.email > /dev/null 2>&1
-if [[ $? -ne 0 ]] ; then
-    printf "Please set your global git user email: "
-    read USER_EMAIL
-    git config --global user.email ${USER_EMAIL}
-fi
-git config --global core.autocrlf false
-git config --global core.eol lf
+# Checkout main branch in all submodules
+echo "🔄 Checking out main branch in all submodules..."
+git submodule foreach --recursive 'git checkout main 2>/dev/null || true'
 
-pull_recursively() { # whenever this is updated, please compare with @musical-patterns/cli/bin/pull.sh
-	git submodule update --init --recursive || return
-	git checkout main || return
-	git pull -r || return
-	git submodule foreach pull_recursively
-}
-export -f pull_recursively
-pull_recursively
+# Install dependencies in the lab (this pulls all @musical-patterns packages from npm)
+echo ""
+echo "📥 Installing dependencies in services/lab..."
+pushd services/lab > /dev/null
+npm install
+popd > /dev/null
+
+# Copy shared config files from CLI to lab
+# (The CLI's postinstall script uses grep -P which doesn't work on macOS,
+# so we do this manually here)
+echo ""
+echo "📋 Copying shared configuration files..."
+CLI_SHARE="services/lab/node_modules/@musical-patterns/cli/share"
+LAB="services/lab"
+
+# Create directories
+mkdir -p "${LAB}/bin"
+mkdir -p "${LAB}/test"
+
+# Copy essential files
+cp "${CLI_SHARE}/bin/port.js" "${LAB}/bin/"
+cp "${CLI_SHARE}/bin/update.sh" "${LAB}/bin/"
+
+# Copy webpack configs (only if they don't already exist in lab)
+for config in webpack.common.js webpack.dev.js webpack.local.js webpack.prod.js webpack.deploy.js webpack.library.js webpack.publish.js webpack.qa.js; do
+    if [[ ! -f "${LAB}/${config}" ]]; then
+        cp "${CLI_SHARE}/${config}" "${LAB}/" 2>/dev/null || true
+    fi
+done
+
+# Copy tsconfig files (only if they don't already exist)
+for config in tsconfig.common.json tsconfig.node.json; do
+    if [[ ! -f "${LAB}/${config}" ]]; then
+        cp "${CLI_SHARE}/${config}" "${LAB}/" 2>/dev/null || true
+    fi
+done
+
+# Copy test support files
+for testfile in jasmine.js mockDom.ts noFailureOnNonEmptySuite.ts reporter.ts setup.ts; do
+    cp "${CLI_SHARE}/test/${testfile}" "${LAB}/test/" 2>/dev/null || true
+done
+
+echo ""
+echo "✅ Setup complete!"
+echo ""
+echo "To start the app locally, run:"
+echo "  make start"
+echo ""
+echo "The app will open at http://localhost:8083"
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Optional: For deployment to Google Cloud, you'll need:"
+echo "  - Google Cloud SDK (gcloud) installed"
+echo "  - Run: gcloud config configurations create musical-patterns"
+echo "  - Run: gcloud config set project musical-patterns"
